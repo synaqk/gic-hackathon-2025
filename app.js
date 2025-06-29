@@ -310,7 +310,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const removeTriBtn = e.target.closest('.remove-trimester-btn');
         const removeCourseBtn = e.target.closest('.remove-course-btn');
         const detailsBtn = e.target.closest('.details-btn');
-        const select = e.target.closest('select');
 
         if (removeTriBtn) {
             const sectionId = removeTriBtn.closest('[data-id]').dataset.id;
@@ -324,15 +323,22 @@ document.addEventListener('DOMContentLoaded', () => {
             const courseCode = detailsBtn.closest('[data-course-code]').dataset.courseCode;
             openCourseModal(getCourseByCode(courseCode));
             return;
-        } else if (select) {
-            const sectionId = select.closest('[data-id]').dataset.id;
-            const tri = plan.find(p => p.id === sectionId);
-            if (tri) tri[select.dataset.type] = parseInt(select.value, 10);
         } else {
             return;
         }
         rerender();
     };
+    const handlePlannerChange = (e) => {
+        const select = e.target.closest('select.year-select, select.trimester-select');
+        if (select) {
+            const sectionId = select.closest('[data-id]').dataset.id;
+            const tri = plan.find(p => p.id === sectionId);
+            if (tri) {
+                tri[select.dataset.type] = parseInt(select.value, 10);
+                rerender();
+            }
+        }
+    }
     const handleClearPlan = () => {
         if (confirm("Are you sure you want to clear your entire degree plan? This action cannot be undone.")) {
             plan = [];
@@ -447,6 +453,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // --- Event Delegation Setup ---
         plannerContainer.addEventListener('click', handlePlannerInteraction);
+        plannerContainer.addEventListener('change', handlePlannerChange);
         coursePoolContainer.addEventListener('click', handleCoursePoolClick);
 
         document.body.addEventListener('dragstart', handleDragStart);
