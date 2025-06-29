@@ -1,0 +1,171 @@
+[
+	{
+		"name": "Bachelor of Computer Science",
+		"code": 1534,
+		"core": [
+			"1004ICT",
+			"1007ICT",
+			"1811ICT",
+			"1011ICT",
+			"1808ICT",
+			"1013ICT",
+			"2801ICT",
+			"2810ICT"
+		],
+		"core_options": [
+			"3820ICT_P1",
+			"3820ICT_P2",
+			"3821ICT",
+			"3822ICT"
+		],
+		"major": [
+			{
+				"name": "Algorithms and Computing",
+				"courses": [
+					"2800ICT",
+					"2802ICT",
+					"3825ICT",
+					"3008ICT",
+					"3005ICT",
+					"3805ICT"
+				]
+			},
+			{
+				"name": "Data Science and Artificial Intelligence",
+				"courses": [
+					"2030ICT",
+					"2802ICT",
+					"3806ICT",
+					"3008ICT",
+					"3006ICT",
+					"3804ICT"
+				]
+			}
+		],
+		"electives": [
+			"1017SCG",
+			"1118ICT",
+			"2808ICT",
+			"2809ICT",
+			"3004ICT",
+			"3701ICT",
+			"3707ICT",
+			"3809ICT",
+			"3811ICT",
+			"3001ICT",
+			"3813ICT",
+			"3906ICT",
+			"1701ICT",
+			"3003ICT"
+		]
+	},
+	{
+		"name": "Bachelor of Cyber Security",
+		"code": 1677,
+		"core": [
+			"1004ICT",
+			"1007ICT",
+			"1118ICT",
+			"1814ICT",
+			"1803ICT",
+			"2007ICT",
+			"3809ICT",
+			"2801ICT",
+			"3014ICT",
+			"3010ICT",
+			"3012ICT",
+			"3906ICT",
+			"3015ICT"
+		],
+		"core_options": [
+			"3821ICT",
+			"3822ICT"
+		],
+		"electives": [
+			"2005ICT",
+			"2030ICT",
+			"2802ICT",
+			"2808ICT",
+			"2809ICT",
+			"3007ICT",
+			"3026CCJ",
+			"3032ICT",
+			"3225AFE",
+			"3803ICT",
+			"3008ICT",
+			"3804ICT",
+			"3808ICT",
+			"2016ICT"
+		]
+	},
+	{
+		"name": "Bachelor of Information Technology",
+		"code": 1538,
+		"core": [
+			"1004ICT",
+			"1007ICT",
+			"1701ICT",
+			"1814ICT",
+			"1803ICT",
+			"1811ICT",
+			"2008ICT",
+			"2810ICT"
+		],
+		"core_options": [
+			"3820ICT_P1",
+			"3820ICT_P2",
+			"3821ICT",
+			"3822ICT"
+		],
+		"major": [
+			{
+				"name": "Data Anyltics and IoT",
+				"courses": [
+					"2030ICT",
+					"2809ICT",
+					"3032ICT",
+					"3003ICT",
+					"3031ICT",
+					"3707ICT"
+				]
+			},
+			{
+				"name": "Information Systems and Business Analysis",
+				"courses": [
+					"2511ICT",
+					"2806ICT",
+					"2007ICT",
+					"3812ICT",
+					"3810ICT",
+					"3301ICT",
+					"3043IBA"
+				]
+			},
+			{
+				"name": "Networks and Cyber Security",
+				"courses": [
+					"2808ICT",
+					"3016ICT",
+					"2809ICT",
+					"3808ICT",
+					"2016ICT",
+					"3809ICT",
+					"3811ICT",
+					"3001ICT",
+					"3906ICT"
+				]
+			},
+			{
+				"name": "Software Development",
+				"courses": [
+					"2006ICT",
+					"2801ICT",
+					"3702ICT",
+					"3004ICT",
+					"3813ICT",
+					"3701ICT"
+				]
+			}
+		]
+	}
+]

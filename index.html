@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-gray-900">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Degree Planner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            height: 100%;
+            font-family: 'Inter', sans-serif;
+            background-color: #111827;
+            color: #e5e7eb;
+        }
+
+        #app-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        #main-grid {
+            flex-grow: 1;
+            min-height: 0; /* Important for flex children that need to scroll */
+        }
+
+        #planner-container, #course-pool-content {
+            /*overflow-y: auto;*/
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.2em 0.6em;
+            font-size: 0.75em;
+            font-weight: 600;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: 0.375rem;
+            margin: 0.1rem;
+        }
+
+        .course-pill, .planned-course-row {
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE 10+ */
+            user-select: none; /* Standard */
+        }
+
+        .course-pill:active, .planned-course-row:active {
+            cursor: grabbing;
+            opacity: 0.7;
+        }
+
+        .trimester-table-container {
+            min-height: 6rem;
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+
+        .drag-over {
+            background-color: #374151; /* gray-700 */
+            border-color: #4f46e5 !important; /* indigo-600 */
+        }
+
+        .planned-course-row.error-border {
+            box-shadow: inset 4px 0 0 0 #ef4444; /* red-500 */
+        }
+
+        .drag-handle {
+            cursor: grab;
+            color: #6b7280; /* gray-500 */
+        }
+
+        .modal-backdrop {
+            background-color: rgba(0, 0, 0, 0.75);
+        }
+
+        .modal-description {
+            white-space: pre-wrap;
+        }
+
+        .planner-table {
+            table-layout: fixed;
+            width: 100%;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="app.js" defer></script>
+</head>
+<body class="p-4 sm:p-6 lg:p-8">
+
+    <div id="app-container" class="max-w-screen-2xl mx-auto w-full">
+        <!-- Header Section -->
+        <header class="flex-shrink-0 flex flex-col md:flex-row items-center justify-between mb-6 gap-4">
+            <div>
+                <h1 class="text-4xl font-bold text-white">Degree Planner</h1>
+                <p id="credit-point-counter" class="text-gray-400 mt-1">Total Credit Points: 0 / 240</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-x-6 gap-y-4">
+                <div class="flex items-center gap-2">
+                    <label for="program-select" class="font-medium text-gray-300">Program:</label>
+                    <select id="program-select" class="bg-gray-700 border border-gray-600 rounded-md p-2 text-white focus:ring-indigo-500 focus:border-indigo-500"></select>
+                </div>
+                <div class="flex items-center gap-2">
+                    <label for="major-select" class="font-medium text-gray-300">Major:</label>
+                    <select id="major-select" class="bg-gray-700 border border-gray-600 rounded-md p-2 text-white focus:ring-indigo-500 focus:border-indigo-500"></select>
+                </div>
+                <button id="clear-plan-btn" class="px-3 py-2 bg-red-700 text-white font-semibold rounded-lg hover:bg-red-600 transition-colors text-sm">
+                    <i class="fas fa-trash-alt mr-2"></i>Clear Plan
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <div id="main-grid" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <!-- Left Side: The Degree Plan -->
+            <main class="lg:col-span-2 flex flex-col min-h-0">
+                <div id="planner-container" class="flex-grow space-y-4 pr-2 overflow-y-auto">
+                    <!-- Trimester sections will be generated here by JavaScript -->
+                </div>
+                <div class="flex-shrink-0 pt-4">
+                    <button id="add-trimester-btn" class="w-full px-4 py-3 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-600 transition-colors">
+                        <i class="fas fa-plus mr-2"></i>Add Trimester
+                    </button>
+                </div>
+            </main>
+
+            <!-- Right Side: Course Selection Pool -->
+            <aside class="bg-gray-800 rounded-xl border border-gray-700 h-full flex flex-col overflow-y-auto">
+                <div class="p-4 flex-shrink-0">
+                    <div class="flex items-baseline justify-between">
+                        <h2 class="text-xl font-bold text-white">Available Courses</h2>
+                    </div>
+                </div>
+                <!-- Tabs -->
+                <div class="px-4 border-b border-gray-600 flex-shrink-0">
+                    <nav class="-mb-px flex space-x-6" id="course-pool-tabs">
+                        <button data-tab="core" class="tab-btn whitespace-nowrap py-3 px-1 border-b-2 font-medium text-sm border-indigo-500 text-indigo-400">Core</button>
+                        <button data-tab="coreOptions" class="tab-btn whitespace-nowrap py-3 px-1 border-b-2 font-medium text-sm border-transparent text-gray-400 hover:text-gray-200 hover:border-gray-400">Core Options</button>
+                        <button data-tab="major" class="tab-btn whitespace-nowrap py-3 px-1 border-b-2 font-medium text-sm border-transparent text-gray-400 hover:text-gray-200 hover:border-gray-400">Major</button>
+                        <button data-tab="electives" class="tab-btn whitespace-nowrap py-3 px-1 border-b-2 font-medium text-sm border-transparent text-gray-400 hover:text-gray-200 hover:border-gray-400">Electives</button>
+                    </nav>
+                </div>
+                <!-- This is the container that holds the lists -->
+                <div id="course-pool-content" class="flex-grow p-4 min-h-0 course-pool-list-container">
+                    <!-- Elective Filters (only shown on elective tab) -->
+                    <div id="elective-filters" class="hidden space-y-4 mb-4">
+                        <input type="text" id="elective-search" placeholder="Search electives..." class="w-full bg-gray-700 border-gray-600 rounded-md p-2 text-sm">
+                        <div class="grid grid-cols-2 gap-4">
+                            <select id="campus-filter" class="bg-gray-700 border-gray-600 rounded-md p-2 text-sm">
+                                <option value="">All Campuses</option>
+                                <option value="SB">Brisbane City (South Bank)</option>
+                                <option value="CBD">Brisbane City (CBD)</option>
+                                <option value="NA">Brisbane South (Nathan)</option>
+                                <option value="GC">Gold Coast</option>
+                                <option value="LO">Logan</option>
+                                <option value="OL">Online</option>
+                            </select>
+                            <select id="trimester-filter" class="bg-gray-700 border-gray-600 rounded-md p-2 text-sm">
+                                <option value="">All Trimesters</option>
+                                <option value="Trimester 1">Trimester 1</option>
+                                <option value="Trimester 2">Trimester 2</option>
+                                <option value="Trimester 3">Trimester 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Course Lists -->
+                    <div id="core-courses-list" class="course-list space-y-2"></div>
+                    <div id="core-options-courses-list" class="course-list hidden space-y-2"></div>
+                    <div id="major-courses-list" class="course-list hidden space-y-2"></div>
+                    <div id="electives-courses-list" class="course-list hidden space-y-2"></div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Course Detail Modal -->
+    <div id="course-modal" class="fixed inset-0 modal-backdrop flex items-center justify-center p-4 z-50 hidden">
+        <div id="modal-content" class="bg-gray-800 rounded-xl shadow-2xl w-full max-w-2xl relative border border-gray-700 flex flex-col max-h-[90vh]">
+            <!-- Modal Header -->
+            <div class="p-6 border-b border-gray-700">
+                <h2 id="modal-title" class="text-2xl font-bold text-white">Course Details</h2>
+                <p id="modal-code" class="text-lg text-indigo-400"></p>
+            </div>
+            <!-- Modal Body -->
+            <div class="p-6 space-y-4 overflow-y-auto">
+                <div>
+                    <h3 class="font-semibold text-gray-300 mb-2">Description</h3>
+                    <p id="modal-description" class="text-gray-400 modal-description"></p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <h3 class="font-semibold text-gray-300 mb-2">Campuses</h3>
+                        <div id="modal-campuses"></div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-300 mb-2">Trimesters Offered</h3>
+                        <div id="modal-trimesters"></div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-300 mb-2">Pre-requisites</h3>
+                    <div id="modal-prerequisites" class="text-gray-400 text-sm"></div>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-300 mb-2">Anti-requisites / Incompatibles</h3>
+                    <div id="modal-antirequisites" class="text-gray-400 text-sm"></div>
+                </div>
+            </div>
+            <!-- Modal Footer -->
+            <div class="p-4 bg-gray-800/50 border-t border-gray-700 text-right">
+                <button id="close-modal-btn" class="px-4 py-2 bg-gray-600 text-white font-semibold rounded-lg hover:bg-gray-500 transition-colors">Close</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

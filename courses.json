@@ -1,0 +1,1675 @@
+[
+    {
+        "code": "1004ICT",
+        "name": "Professional ICT Practice",
+        "description": "Comprehensive coverage of the repertoire of soft skills required by IT professions in today\u2019s employment market. It is based on the principle of \"Essential Soft Skills for IT Professionals\".  \n\nCommunication Skills: Clear, effective communication across various mediums and audiences. From writing compelling emails and reports to delivering persuasive presentations, you'll learn to convey complex technical concepts with clarity and confidence. Teamwork: The essential ingredients of high-performing teams. How to work team dynamics with skill. Explore modern collaboration tools and agile methodologies that drive innovation in today's tech companies. Problem-Solving &amp; Critical Thinking: Sharpen your analytical skills and learn creative problem-solving techniques that will help you tackle challenging IT issues. Time Management &amp; Organization: Develop strategies to handle multiple projects, meet deadlines, and maintain peak productivity in the fast-paced tech world. Project Management Fundamentals: Learn about the project lifecycle and essential skills for planning, executing, and delivering successful IT projects. \n\nProfessional Ethics: Explore the ethical dimensions of IT, including data privacy, intellectual property, and corporate social responsibility, ensuring you're prepared to make sound decisions in complex situations. Customer Service &amp; Client Relations: Learn to build strong relationships with clients and users, translating technical jargon into user-friendly language and delivering excellent service.  \nCultural Awareness &amp; Inclusivity: Prepare for the global nature of IT by developing cross-cultural competencies and strategies for fostering inclusive work environments.  Leadership: Discover your leadership potential and learn how to inspire and guide teams towards achieving ambitious tech goals.  Personal Development: Cultivate self-awareness, emotional intelligence, and a growth mindset that will fuel your continuous improvement throughout your IT career.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL",
+            "SB"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "1007ICT",
+        "name": "Computer Systems and Cyber Security",
+        "description": "This course introduces the underlying structures and mechanisms of modern computer systems, networks and security concepts. All students enrolled in an ICT degree need to have an understanding of the basic architecture and operation of computer systems and a general understanding of relevant security concerns. This course provides an overview of the hardware, software, network, and security concepts and  technologies that define modern computer systems. The course aims to provide students with the basic knowledge of how the components that define a computer work together and by extension an appreciation of the capabilities and limitations of computer systems. This knowledge assists students in the application of computing technologies to solve real world problems. This course material builds a foundation for further study in the field of information technology, and is a suitable prerequisite for many ICT courses. \n\nIncompatible: 1807ICT: Computer and Network Architectures.\n\nThis course was previously known as 1007ICT Computer Systems and Networks and is incompatible with 1007ICT Computer Systems and Networks.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1807ICT"
+                ],
+                "summary": "must not have completed 1807ICT Computer and Network Architecture"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "LG",
+            "NA",
+            "OL",
+            "SB"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
+            "Trimester 3"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "1011ICT",
+        "name": "Applied Computing",
+        "description": "The course starts with a high-level view of computer systems covering application types and context, user experience, analysis modelling and integration of system components. The course then moves on to consider the role data plays within a computer system by investigating data types, data modelling, Database Management Systems and initial aspects of Data Science. \n\nIncompatible with 1814ICT Data Management AND 1804ICT Data Management AND 2814ICT Data Management",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1814ICT",
+                    "1804ICT",
+                    "2814ICT"
+                ],
+                "summary": "must not have completed 1814ICT Data Management AND must not have completed 1804ICT Data Management AND must not have completed 2814ICT Data Management"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "1013ICT",
+        "name": "Mathematics for Computer Science",
+        "description": "This course will cover topics in calculus, probability, and statistics, with hands-on practice in implementing these mathematical methods through the C programming language. \nIncompatible with 1806ICT Programming Fundamentals.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1806ICT"
+                ],
+                "summary": "must not have completed 1806ICT Programming Fundamentals"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "1017SCG",
+        "name": "Foundation Mathematics",
+        "description": "Foundation Mathematics aims to provide a solid basis from which to build a wider set of mathematical skills across a broad range of disciplines. You may be looking to further studies in Education, IT, Business, Engineering, Environment or Science; all of which require a solid grounding in mathematics. Foundation Mathematics has been designed to cater for those who did not study Mathematical Methods (or equivalent) in high school or have been away from study for several years and need to refresh their mathematical skills. Foundation Mathematics covers the assumed mathematical knowledge required for courses such as 1201SCG, 1202SCG, 1010ENG and 1020ENG. NOTE: Students who have recently completed the Senior Secondary Syllabus of Mathematical Methods or Specialist Mathematics (previously Mathematics B or C), or equivalent, are NOT permitted to enrol in 1017SCG Foundation Mathematics.\n\nNOTE: this course is only offered on-campus, and students are expected to attend assessment and weekly classes on campus, in person.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
+            "Trimester 2",
+            "Trimester 3"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "1118ICT",
+        "name": "Introduction to Cyber Security",
+        "description": "This course introduces the essential cyber security concepts, the procedures for risk mitigation, data privacy protection and governance. It covers a broad range of technical countermeasures from cryptographic algorithms to Internet protocols. It also thoroughly introduces how to enhance the cyber security from three dimensions: people, technology and policy. Incompatible: 2905ICT Fundamentals of Cyber Security",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "2905ICT"
+                ],
+                "summary": "must not have completed 2905ICT Fundamentals of Cyber Security"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL",
+            "SB"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "1701ICT",
+        "name": "Creative Coding",
+        "description": "Coding is an important part of today's world. In this course you will learn how to code in a creative context, utilising a practical and hands-on approach, producing generative art, data visualisations, and interactive interfaces.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "LG",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "1803ICT",
+        "name": "Application Systems",
+        "description": "This course in Application Systems introduces students to the analysis, integration, and design of socio-technical systems focusing on the impact and user experience. It covers various topics, including the analysis of human activity systems, ontological modelling, and specifying the organisational and external context of computing systems, providing aspiring IT professionals with fundamental  knowledge and skills necessary to analyse, design, and implement effective application systems while considering user experience and contextual factors in various ICT domains. \n\nThis course is previously known as 1803ICT Information Systems Foundations and is incompatible with 1803ICT Information Systems Foundations.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "LG",
+            "NA",
+            "OL",
+            "SB"
+        ],
+        "trimesters_offered": [
+            "Trimester 2",
+            "Trimester 3"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "1808ICT",
+        "name": "Discrete Structures",
+        "description": "Discrete structures are foundational in that many areas of computer science require the ability to work with concepts from discrete structures and it is pervasive in the areas of data structures and algorithms. Discrete structures includes important material from such areas as set theory, relations, functions, logic, proof techniques, basic counting graph theory, and linear algebra.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "1811ICT",
+        "name": "Programming Principles",
+        "description": "Programming is a foundational skill for all computing disciplines. This course develops skills and concepts that are essential to good programming practice and problem solving. It covers fundamental programming concepts,  object-oriented programming, basic data structures, and algorithmic processes. \nIncompatible: 2807ICT Programming Principles.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "2807ICT"
+                ],
+                "summary": "must not have completed 2807ICT Programming Principles"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL",
+            "SB"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "1814ICT",
+        "name": "Data Management",
+        "description": "Information derived from data is important to the management, productivity and competitive advantage of an organisation. Data must be efficiently collected, organised, retrieved and managed to make it meaningful to the organisation. It is the role of the IT professional to develop, deploy, manage and integrate data and information systems to support the organisation. This course includes the organisation, modeling, transformation and presentation of data. \nIncompatible with 1011ICT Applied Computing and 1804ICT Data Management and 2814ICT Data Management.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1011ICT",
+                    "1804ICT",
+                    "2814ICT"
+                ],
+                "summary": "must not have completed 1011ICT Applied Computing AND must not have completed 1804ICT Data Management AND must not have completed 2814ICT Data Management"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL",
+            "SB"
+        ],
+        "trimesters_offered": [
+            "Trimester 2",
+            "Trimester 3"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "2005ICT",
+        "name": "Fundamentals of Blockchain and Distributed Ledger Technology",
+        "description": "This course introduces the fundamental concepts and potential applications of blockchain and Distributed Ledger Technologies (DLT). The emphasis is on how these technologies provide immutability, provenance and enable decentralised operations without the need for a trusted third-party. Use of DLT and smart contracts in FinTech, supply chain, cross-border asset transfer will be discussed. Pre-requisite: none",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "2006ICT",
+        "name": "Object Oriented Software Development",
+        "description": "Software design plays a significant role in developing software: during software design, software engineers produce various models that form a kind of blueprint of the solution to be implemented. Students will create, analyse and evaluate these models to determine whether or not they will allow fulfillment of the various requirements. Therefore, students will gain the command of the tools and techniques for software modelling, as well as describing software architectures. Such software designs specify the software architecture, that is, how software is decomposed and organised into components, and the interfaces between those components. Models should describe the components at a level of detail that enables their construction. Attention will also be given to the software architectures underlying user interfaces, techniques for designing and evaluating of the human-computer interface and techniques for creating and prototyping them.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1811ICT",
+                    "1701ICT"
+                ],
+                "logic": "OR",
+                "summary": "must have completed 1811ICT Programming Principles OR must have completed 1701ICT Creative Coding"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "2007ICT",
+        "name": "Cyber Security Standards and Operations",
+        "description": "Cyber Security Standards and Operations: Building Organizational Resilience. Organizations today face a growing number of cyber threats. This course equips you with essential knowledge of industry-recognized cyber security standards and frameworks to help protect your organization's assets, operations, and reputation.   \n\nOver ten comprehensive modules, you'll gain practical insights into risk management strategies, information security systems, and effective security controls. Whether you're new to cyber security or looking to enhance your existing skills, this course provides a solid foundation for navigating the complex world of digital protection.\n\nWe start by exploring the fundamental purpose of cyber security standards. You'll learn why aligning your organization's practices with industry benchmarks is crucial for maintaining a strong security posture. We'll dive into risk management frameworks like NIST RMF and ISO 31000, teaching you how to identify, assess, and mitigate risks to your critical assets.\n\nNext, we'll focus on Information Security Management Systems (ISMS), with special attention to the globally recognized ISO 27001/27002 standards. You'll discover how to establish robust ISMS processes, implement key security controls, and foster a culture of continuous improvement within your organization.\n\nThe course then expands into widely adopted cyber security frameworks such as NIST CSF, NIST SP 800-53, and CIS Critical Security Controls. These powerful tools offer structured approaches to identifying and addressing cyber risks, allowing you to tailor security controls to your organization's specific needs.\n\nWe'll also explore specialized security domains, including:\n\n- Identity and access management\n- Data protection and privacy\n- Network and application security\n- Security operations and incident response\n\nYou'll gain practical knowledge in areas like authentication, authorization, encryption, data privacy compliance, network segmentation, web application security, secure coding practices, and incident response planning.\n\nRecognizing the unique challenges faced by critical infrastructure and regulated industries, we dedicate a module to sector-specific security standards. This includes guidelines from NERC CIP, SOCI, AESCSF, FISMA, HIPAA, ASD Essential 8, ASD ISM, NIST SP 800-171, PCI DSS, and the Zero Trust Security Executive Order 14028.\n\nThe course concludes with an exploration of cybersecurity capability maturity models, such as C2M2 and the Essential Eight Maturity Model. We'll also discuss career paths, certifications, ethical principles, and professional development opportunities in the rapidly evolving field of cyber security.\n\nBy the end of this course, you'll be equipped to:\n\n- Understand and apply key cyber security standards and frameworks\n- Assess and manage organizational cyber risks effectively\n- Implement robust information security management systems\n- Navigate sector-specific security requirements\n- Contribute to a culture of cyber resilience in your organization\n\nThis course provides the knowledge and skills you need to succeed. Join us to build a safer digital future for your organization and beyond.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1007ICT"
+                ],
+                "logic": "AND",
+                "summary": "must have completed 1007ICT Computer Systems and Cyber Security"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL",
+            "SB"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "2008ICT",
+        "name": "Design Thinking in IT",
+        "description": "A key component to the discipline of Information Technology (IT) is the understanding and the advocacy of the user in the development of IT applications and systems. IT graduates must develop a mind-set that recognizes the importance of users and organisational contexts and employ user-centred methodologies in the development, evaluation, and deployment of IT applications and systems. This requires graduates to develop knowledge of Human-Computer Interaction, including user and task analysis, human factors, ergonomics, application domains, user interface development tools and graphical user interface frameworks, accessibility standards, and cognitive psychology.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1805ICT"
+                ],
+                "summary": "must not have completed 1805ICT Human Computer Interaction"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "2016ICT",
+        "name": "Cloud Architecture and Administration",
+        "description": "This course introduces fundamental cloud computing concepts, explores Infrastructure as Code (IaC).  This course provides a practical understanding of virtualization technologies, covers networking in the cloud, discusses storage and backup strategies, emphasizes security and compliance, and provides insights into monitoring and troubleshooting. Students require basic IT and computer networking knowledge and should have completed 1007ICT Computer Systems and Cyber Security. The foundational knowledge delivered in this course can serve as a stepping stone for further cloud-based certifications, such as the Amazon Web Services Certified Cloud Practitioner and Cloud Architect certifications.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1007ICT"
+                ],
+                "logic": "AND",
+                "summary": "must have completed 1007ICT Computer Systems and Cyber Security"
+            }
+        ],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "3808ICT"
+                ],
+                "summary": "must not have completed 3808ICT Routing and Internetworking"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "2030ICT",
+        "name": "Introduction to Big Data Analytics",
+        "description": "This course will explore the theory and applications of big data and demonstrate the process from data to decisions. Students will learn big data in various formats, data processing platforms and data analytics tools to transform, visualise, model, and communicate the insights hidden in the data.\n\nIncompatible: 1116ICT Introduction to AI and Data Analytics",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1116ICT"
+                ],
+                "summary": "must not have completed 1116ICT Introduction to AI and Data Analytics"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "2511ICT",
+        "name": "Business Analysis",
+        "description": "This course provides intermediate coverage of the processes, methods, techniques and tools used by business analysts with an emphasis on people skills supporting negotiation and communication for the elicitation and specification of requirements for an information systems solution. Students interested in pursuing a career in business analysis (BA) can use this course as a stepping stone towards entering the BA profession. The course facilitates acquiring knowledge useful in preparing for certification by industry recognised bodies such as the International Institute of Business Analysis (IIBA).\n\nPre-requisite: 1803ICT Information Systems Foundations or 1410ICT Introduction to Information Systems and 1802ICT Foundations of Software Development (Previously known as 1802ICT Software Development and is incompatible with 1802ICT Software Development).",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1803ICT",
+                    "1410ICT",
+                    "1802ICT"
+                ],
+                "logic": "OR",
+                "summary": "must have completed 1803ICT Application Systems OR must have completed 1410ICT Introduction to Information Systems AND must have completed 1802ICT Foundations of Systems Development"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "2675QCA",
+        "name": "Mixed Reality Experiences",
+        "description": "This course explores 3D digital environments (and interaction through gameplay) for visualisation, simulation, and entertainment. Theories of human experience and perception will be addressed and creative practices using current and emerging games, virtual and augmented reality technologies will be examined. These skills and understandings will be applied to conceptualise, design, construct, and test interactive immersive experiences.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "OL",
+            "SB"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "2800ICT",
+        "name": "Object Oriented Programming",
+        "description": "This course introduces students to object oriented programming using modern C++ (C++11, C++14, C++17). C++ is a widely deployed language and is used in this course to demonstrate understanding of the concepts presented and for solving practical problems. \n\nPrerequisite: For students in the BCompSci:1806ICT Programming Fundamentals or 1811ICT Programming Principles. For students in the BEng(Hons)/BCompSci: 1305ENG Engineering Programming. Incompatible: 1801ICT Programming Languages. \n\nPreviously known as 2800ICT Software Development Processes and is incompatible with 2800ICT Software Development Processes.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1806ICT",
+                    "1811ICT",
+                    "1305ENG"
+                ],
+                "logic": "OR",
+                "summary": "must have completed 1806ICT Programming Fundamentals OR must have completed 1811ICT Programming Principles OR must have completed 1305ENG Engineering Programming"
+            }
+        ],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1801ICT"
+                ],
+                "summary": "must not have completed 1801ICT Object-Oriented Programming"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "2801ICT",
+        "name": "Computing Algorithms",
+        "description": "The real-world performance of any software system depends on the algorithms used and the efficiency of their implementation. The ability to select algorithms appropriate to solving particular problems, based on understanding the range of algorithms that address well-defined problems, analyzing their complexity and performance, and their suitability in particular contexts and implementing them is critical for building effective software. A number of general algorithmic strategies are presented including brute force, heuristics, greedy, recursive backtracking and divide and conquer. Common algorithms pertaining to searching, sorting, binary trees, graphs, and string / expression parsing are also discussed. Also, both in-memory and file data structures and their interrelationship with specific algorithms are reviewed. \n\nPre-requisites: 1811ICT Programming Principles",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1811ICT",
+                    "2807ICT"
+                ],
+                "logic": "OR",
+                "summary": "must have completed 1811ICT Programming Principles OR must have completed 2807ICT Programming Principles"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "2802ICT",
+        "name": "Intelligent Systems",
+        "description": "Artificial intelligence (AI) is the study of solutions for problems that are difficult or impractical to solve with traditional methods. The solutions rely on a broad set of general and specialized search strategies, machine learning and knowledge representation and reasoning schemes. The study of Artificial Intelligence prepares the students to determine when an AI approach is appropriate for a given problem, identify the appropriate representation and reasoning mechanism, and implement and evaluate it. This course will provide an introduction to search strategies and machine learning. Prerequisites: [1020ENG Engineering Maths 2 OR 1013ICT Mathematics for Computer Science OR 1808ICT Discrete Structures] AND [1806ICT Programming Fundamentals OR 1811ICT Programming Principles OR 1305ENG Engineering Programming].",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1020ENG",
+                    "1013ICT",
+                    "1808ICT",
+                    "1806ICT",
+                    "1811ICT",
+                    "1305ENG"
+                ],
+                "logic": "OR",
+                "summary": "must have completed 1020ENG Engineering Mathematics 2 OR must have completed 1013ICT Mathematics for Computer Science OR must have completed 1808ICT Discrete Structures AND must have completed 1806ICT Programming Fundamentals OR must have completed 1811ICT Programming Principles OR must have completed 1305ENG Engineering Programming"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "2806ICT",
+        "name": "IT Services Management",
+        "description": "This course provides an understanding of the concepts and principles of IT service management (ITSM). Various case studies are analyzed to deepen the understanding of ITSM. This course introduces Information Technology Infrastructure Library (ITIL) as a context to better understand the service lifecycle. An organisation's objective of using an ITSM tool/framework is to provide improved business value to the customers. This can be achieved if IT processes are designed and implemented efficiently to provide better support and service to the users. This will lead to business success as there will be less disruption and loss of productive hours, reduce costs, increase revenue, improve public relations, and achieve their business objectives. This course provides a foundational understanding that students can use should they wish to prepare for certification by industry recognized bodies.\n\n\nPre-Requisite: 1803ICT Information Systems Foundations",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1803ICT"
+                ],
+                "logic": "AND",
+                "summary": "must have completed 1803ICT Application Systems"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "LG",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
+            "Trimester 3"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "2808ICT",
+        "name": "Secure Development Operations",
+        "description": "Incorporating cyber security design in software development is essential for producing contemporary software systems. This course introduces the principles of secure code development for software and web development. Topics covered include secure software design, secure coding best practices, the Continuous Delivery (CD) model for secure software development, software security tools for data validation, code bug detection, and web application vulnerability assessment.\n\nPre-requisites: 2807ICT OR 1811ICT Programming Principles OR 1701ICT Creative Coding AND 1621ICT Web Technologies.\n\nPreviously known as 2808ICT Information and Security Management and incompatible with 2808ICT Information and Security Management.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1701ICT",
+                    "1621ICT"
+                ],
+                "logic": "AND",
+                "summary": "must have completed 1701ICT Creative Coding AND must have completed 1621ICT Web Technologies, 1811ICT/2807ICT Programming Principles"
+            },
+            {
+                "type": "courses",
+                "codes": [
+                    "2807ICT",
+                    "1811ICT"
+                ],
+                "logic": "OR",
+                "summary": "1811ICT/2807ICT Programming Principles"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "2809ICT",
+        "name": "Computer Networking Essentials",
+        "description": "These concepts introduce students to the fundamental issues in modern data communications and computer networks. Students learn about the layered networking model and are introduced to networking devices and protocols. They learn how these are used in computer networks and in network-based application programs. The primary focus of this subject is Local Area Networks (LAN). Student practical work includes designing and building simple peer-to-peer networks and LANs that are connected to the Internet. The core set of protocols employed on the global Internet, TCP/IP,  is studied. \n\nPre-Requisite: 1007ICT Computer Systems and Cyber Security OR 80CP of completed courses.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "units",
+                "amount": 80,
+                "summary": "must have completed 1007ICT Computer Systems and Cyber Security OR the student must have achieved at least 80 credit points prior to enrolment"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "2810ICT",
+        "name": "Software Projects",
+        "description": "Organisations typically use many disparate technologies to achieve their business objectives. This course first gives an overview of low-level technologies such as programming with a focus on code reuse, scripting techniques and software configuration tools. This is followed by a practical presentation of software packages commonly used for handling data and producing reports and presentations. \n\nPre-Requisite: 1811ICT Programming Principles or 2807ICT Programming Principles.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1811ICT",
+                    "2807ICT"
+                ],
+                "logic": "OR",
+                "summary": "must have completed  1811ICT/2807ICT Programming Principles"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL",
+            "SB"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3001ICT",
+        "name": "Enterprise Routing and Network Architectures",
+        "description": "This course builds on the foundations of computer networking essentials learnt in 2809ICT, and enables students to understand the various network protocols, architectures and considerations related to the configuration, operation and troubleshooting of enterprise networks. After completing this course, students should be prepared to undertake industry certification.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3003ICT",
+        "name": "Programming for Robotics",
+        "description": "This course introduces the underlying architecture and principles of modern robotic hardware, software, and communication that build the foundation of modern Intelligent Systems. The course provides students with the basic knowledge of how the components work together and define a system, and by extension provides an appreciation of the capabilities and limitations of computer and robotic systems. This knowledge assists students in the application of technologies to solve problems and provides a foundation for further study in the field of robotics.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1804ICT"
+                ],
+                "logic": "AND",
+                "summary": "must have completed 1804ICT Data Management"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3004ICT",
+        "name": "Web Application Development",
+        "description": "Web applications interact with users, connecting to back-end databases and dynamically generating results to the browser through a web server. This course presents a systematic introduction to the development of dynamic, community-based, Web applications through the integration of HTML/CSS, with server-side scripting languages, database systems, modern web frameworks and other related technologies. \n\nPrerequisite: 1811ICT/2807ICT Programming Principles or 2701ICT Interactive App Development or 2702ICT Intelligent Media Systems Incompatible: 2503ICT Web Programming",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1811ICT",
+                    "2807ICT",
+                    "2701ICT",
+                    "2702ICT"
+                ],
+                "logic": "OR",
+                "summary": "must have completed 1811ICT Programming Principles OR must have completed 2807ICT Programming Principles OR must have completed 2701ICT Interactive App Development OR must have completed 2702ICT Intelligent Media Systems"
+            }
+        ],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "2703ICT",
+                    "2503ICT"
+                ],
+                "summary": "must not have completed 2703ICT Web Application Development AND must not have completed 2503ICT Web Programming"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3005ICT",
+        "name": "Distributed Programming",
+        "description": "This course covers a selection of advanced systems programming topics in multiprocessing, multitasking, task synchronization mechanisms, task communication mechanisms, operating system mechanisms as applied to both monolithic and distributed computing. Material about task handling, task synchronisation mechanisms (such as signals, locks, semaphores, or monitors), task communication mechanisms (including shared memory, pipes, sockets and messages), file system interaction, system functions, and current open standards will be presented and used in programming assignments, exercise and example material. \n\nPre-Requisite: 1806ICT Programming Fundamentals OR 1305ENG Engineering Programming.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1806ICT",
+                    "1305ENG"
+                ],
+                "logic": "OR",
+                "summary": "must have completed 1806ICT Programming Fundamentals OR must have completed 1305ENG Engineering Programming"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3006ICT",
+        "name": "Robotics and Computer Vision",
+        "description": "An intelligent system has to be able to autonomously perceive its environment, in order to react or interact with it intelligently. Perceptual computing encompasses the range of processing techniques for enabling machines to intelligently perceive rather than just sense their environment, or wait for operator input. This course focuses on techniques related to image perception and computer vision. \n\nStudents must be enrolled in either 1534 Bachelor of Computer Science, or 1585 B Engineering (Hon)/BComp Science.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "2801ICT",
+                    "2802ICT"
+                ],
+                "logic": "AND",
+                "summary": "must have completed 2801ICT Computing Algorithms AND must have completed 2802ICT Intelligent Systems"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3007ICT",
+        "name": "Industrial Applications of Blockchain",
+        "description": "The course is designed for students to learn the basics of blockchain and Distributed Ledger Technology (DLT) and the real-world applications. It will be particularly useful for anyone who is keen to explore the basic design methodology for developing solutions embracing digital transformation by utilising the DLT. Real-world case studies ranging from FinTech to Non-Fungible Token (NFT) and digital identity management will be used to identify and analyse the opportunities and challenges.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3008ICT",
+        "name": "Deep Learning",
+        "description": "The course offers a comprehensive understanding of deep learning fundamentals and practical applications. Students explore principles and algorithms, gaining hands-on experience in building and training deep neural networks with TensorFlow and PyTorch, covering topics like convolutional and recurrent neural networks",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "2802ICT"
+                ],
+                "logic": "AND",
+                "summary": "must have completed 2802ICT Intelligent Systems"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3010ICT",
+        "name": "Cyber Security of Cyber Physical Systems",
+        "description": "The Cyber security of Cyber Physical Systems is a course with a technical emphasis is to educate students on the unique security challenges and vulnerabilities associated with cyber physical systems (CPS), which are systems that integrate physical and computational components, such as Internet of Things (IoT) devices, industrial control systems (ICS), autonomous vehicles, and smart grids. The course aims to provide students with a deep understanding of the technical concepts, methods, and tools used to secure CPS and develop the skills necessary to design, implement, and evaluate effective security measures for these systems.\n\nPre-requisites: 1118ICT Introduction to Cyber Security.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1118ICT"
+                ],
+                "logic": "AND",
+                "summary": "must have completed 1118ICT Introduction to Cyber Security"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3012ICT",
+        "name": "Cryptography",
+        "description": "The Cryptography course provides an in-depth exploration of modern cryptography, covering concepts, techniques, and applications that are crucial for data security and secure communication and applications. Students will delve into both theoretical foundations and practical implementations of cryptographic algorithms. Students will also get exposure to contemporary challenges and emerging technologies related to cryptography. Through a combination of lectures, hands-on workshops and assignments, students will gain the knowledge and skills necessary to understand, implement, and analyse secure cryptographic systems.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3014ICT",
+        "name": "Cyber Security Defence and Incident Response",
+        "description": "The Cyber Security Defence and Incident Response course will provide students with a comprehensive understanding of the principles, strategies, and techniques used in defending information systems and networks against cyber threats, as well as responding to security incidents effectively. This course aims to equip students with the knowledge and skills needed to develop, implement, and manage robust cyber defence strategies, and to respond to security incidents in a timely and effective manner.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL",
+            "SB"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3015ICT",
+        "name": "Trustworthy AI",
+        "description": "The Trustworthy AI course provides a concentrated exploration of the technical dimensions involved in uncovering the fundamental principles and methodologies for constructing reliable AI systems. Encompassing topics like safety and robustness, fairness and bias, transparency and explainability, privacy and data protection, as well as regulations and standards, this course equips you to navigate the delicate equilibrium between ground-breaking innovation and conscientious AI advancement. By engaging with real-world case studies and immersive hands-on exercises, you will develop the expertise required to craft AI systems that not only uphold privacy and diminish bias but also cultivate a bedrock of trust among users and stakeholders.\n\nPrerequisites:  1118ICT Introduction to Cyber Security OR 2905ICT Fundamentals of Cyber Security.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1118ICT",
+                    "2905ICT"
+                ],
+                "logic": "OR",
+                "summary": "must have completed 1118ICT Introduction to Cyber Security OR must have completed 2905ICT Fundamentals of Cyber Security"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3016ICT",
+        "name": "Secure Development Operations",
+        "description": "Incorporating cyber security design in software development is essential for producing contemporary software systems. This course introduces the principles of secure code development for software and web development. Topics covered include secure software design, secure coding best practices, the Continuous Delivery (CD) model for secure software development, software security tools for data validation, code bug detection, and web application vulnerability assessment. Formerly 2808ICT Information and Security Management/Secure Development Operations. \nPre-requisites: 2016ICT Cloud Architecture and Administration",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "2016ICT"
+                ],
+                "logic": "AND",
+                "summary": "must have completed 2016ICT Cloud Architecture and Administration"
+            }
+        ],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "2808ICT"
+                ],
+                "summary": "must not have completed 2808ICT Secure Development Operations"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3026CCJ",
+        "name": "Fraud and Cybercrime",
+        "description": "This course covers a range of technology-enabled crimes, including attacks on computer hardware (i.e., viruses, ransomware attacks, etc.) and those crimes in which computers are used as the primary facilitator of the crime (i.e., online fraud, cyber terrorism, cyber stalking, cyber bullying, online child exploitation, etc.).",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [
+            {
+                "type": "other",
+                "summary": "must not have completed CCJ326 Fraud and Cybercrime"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "MG",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2",
+            "Trimester 3"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3031ICT",
+        "name": "Applied Data Mining",
+        "description": "This course will cover important concepts in Data Mining including generating new information, discover patterns, and unlock actionable insights from data. Students will be introduced to techniques and tools in mining associative and sequential patterns, abnormality detection, correlation analysis, clustering, and forecasting.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "2030ICT"
+                ],
+                "logic": "AND",
+                "summary": "must have completed 2030ICT Introduction to Big Data Analytics"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3032ICT",
+        "name": "Big Data Analytics and Social Media",
+        "description": "This course aims to introduce the basic knowledge and necessary skills for analysis of Big Data. Big Data analytics is regarded as one of the important emerging technologies in different fields. The course is designed to stimulate interest in big data analytics in a popular scenario, i.e. social media. As such, some topics will be covered in depth while some will be covered only on an introductory level. Students will be shown how to collect data and extract information hidden in huge volumes of social media data, which can be valuable for many businesses to understand the perceptions or opinions of their services or products. Pre-requisite: Students must have completed 60 credit points towards their degree before undertaking this course. \nIncompatible: 1117ICT Big Data Analytics and Social Media or 4030ICT Big Data Analytics and Social Media",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1117ICT",
+                    "4030ICT"
+                ],
+                "summary": "must not have completed 1117ICT Big Data Analytics and Social Media OR must not have completed 4030ICT Big Data Analytics and Social Media"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3043IBA",
+        "name": "Managing Digital Innovation",
+        "description": "This course develops skills and competencies around digital innovation. New technologies have contributed to enormous changes in the dynamics of business and society. Students will be exposed to the tools to deal with rapid change and fast growth of managing digital innovations.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [
+            {
+                "type": "other",
+                "summary": "must not have completed IBA343 Managing Digital Innovation"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3225AFE",
+        "name": "Applied Financial Crime Investigation and Compliance",
+        "description": "This capstone course examines the financial crime investigation and compliance issues faced by major Australian Financial Institutions. This includes the investigative mindset required for monitoring and reporting suspicious behaviour, as well as the vital role each staff member plays in the prevention, detection, and resolution of financial crime. Incorporating insights from Criminology, Forensic Accounting and Data Analytics, this applied course is designed to equip students with the latest techniques in financial crime investigation and compliance practices.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3301ICT",
+        "name": "Enterprise Architecture Concepts",
+        "description": "The course introduces students to the concepts of Enterprise Architecture (EA) and demonstrates how Engineering and management views can be unified into a single EA approach. The course covers relevant international and industry standards, including Architecture Frameworks, Enterprise Modelling Frameworks and Languages, Reference Models and Methodologies, and is illustrated using industry case studies. Practical assignments support student learning, with an emphasis on how EA supports business evolution and change, and how an organisation can establish and sustain its own architecture practice. \n\n\nPrerequisite: 1803ICT Information Systems Foundations (previously 1410ICT Introduction to Information Systems)",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1803ICT"
+                ],
+                "logic": "AND",
+                "summary": "must have completed 1803ICT Application Systems"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3654QCA",
+        "name": "Mobile Play",
+        "description": "This course investigates the application of text, images, animation and sound into interactive programs. Students will be taken through the process of program creation and production. Exercises in authoring techniques will lead to an assignment which will use professional authoring programs and other imaging software to assemble an interactive program or app across a wide range of devices.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "OL",
+            "SB"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3701ICT",
+        "name": "Mobile Application Development",
+        "description": "Mobile technologies are fast becoming ubiquitous and are being used to\nmeet a diversity of purposes from business and industry, to education,\nentertainment and medical applications. In this course, students work\nwith popular mobile application development environments and methods\nto create mobile applications. In so doing, students build the\nknowledge and skills necessary to develop native mobile applications\nthat exploit the device capabilities including camera, compass,\ngestures, and sensors such as accelerometer to create effective and\nhighly interactive mobile applications.\nPre-requisite: 1811ICT/2807ICT Programming Principles or 2701ICT Interactive Application Development\nIncompatible: 2501ICT Programming Mobile Applications\nNote: for students who have already completed 1305ENG or 1806ICT, 2807ICT can be completed as a co-requisite with (at the same time as) 3701ICT",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1811ICT",
+                    "2807ICT"
+                ],
+                "logic": "OR",
+                "summary": "must have completed 1811ICT Programming Principles OR must have completed 2807ICT Programming Principles"
+            }
+        ],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "2501ICT"
+                ],
+                "summary": "must not have completed 2501ICT Programming Mobile Applications"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3702ICT",
+        "name": "XR and Games Development",
+        "description": "Video games are often the first virtual environments people engage with, whether these are 2D platformers, 3D shooters, puzzlers or eXtended Reality (including virtual and augmented reality) environments. Building these environments requires a diverse skill set, including creativity, human-centered design, modelling knowledge, and development knowledge including object-oriented principles, mobile design, gamification best practice, technical frameworks and graphics engines. \n\nThis course utilizes advanced techniques and frameworks to engage students with key ideas in game/XR design, programming, architecture and the reuse of game engines, to develop a fundamental knowledge and skills required to create interactive digital environments that engage users.\n\nPre-requisites: 1811ICT Programming Principles OR must have completed 1701ICT Creative Coding",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1811ICT",
+                    "1701ICT"
+                ],
+                "logic": "OR",
+                "summary": "must have completed 1811ICT Programming Principles OR must have completed 1701ICT Creative Coding"
+            }
+        ],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "3705ICT"
+                ],
+                "summary": "must not have completed 3705ICT Virtual and Augmented Reality"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3707ICT",
+        "name": "Home Automation and Robotics",
+        "description": "This course investigates the leading edge technologies that define the future of home automation and robotics. It involves the intelligence, control, and automation of lighting, heating, ventilation, air conditioning (HVAC), and security, as well as smart, stationary and autonomous home appliances.\n\nPre-requisite: 1711ICT Introduction to Robotics OR 1007ICT Computer Systems and Networks OR 1807ICT Computer and Network Architecture, AND at least one of 1701ICT Creative Coding OR 1811ICT/2807ICT Programming Principles.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1711ICT",
+                    "1007ICT",
+                    "1807ICT",
+                    "1701ICT",
+                    "1811ICT",
+                    "2807ICT"
+                ],
+                "logic": "OR",
+                "summary": "must have completed 1711ICT Introduction to Robotics OR must have completed 1007ICT Computer Systems and Cyber Security OR must have completed 1807ICT Computer and Network Architecture AND must have completed 1701ICT Creative Coding OR must have completed 1811ICT Programming Principles OR must have completed 2807ICT Programming Principles"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3803ICT",
+        "name": "Big Data Analysis",
+        "description": "This course will cover basic concepts in Data Analysis including cleaning and manipulating data into suitable forms (discrete, continuous, categorical, etc.) for visualizing and understanding relationships in data. Descriptive statistics and hypothesis testing, statistical inference, decision making theory and application of unsupervised machine learning for exploratory (scalable clustering algorithms) and confirmatory analysis (factor analysis up to nonnegative matrix factorization).\n\nPre-Requisite: 1808ICT Discrete Structures and 1811ICT Programming Principles. \nPreviously known as 3803ICT Data Analytics and is incompatible with 3803ICT Data Analytics.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1811ICT",
+                    "1808ICT"
+                ],
+                "logic": "AND",
+                "summary": " must have completed 1811ICT Programming Principles AND must have completed 1808ICT Discrete Structures"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3804ICT",
+        "name": "Data Mining",
+        "description": "Data Mining and analysis: Data mining algorithms, Associative and sequential patterns, Market basket analysis, Bayesian modeling and maximum likelihood estimation techniques. Application of supervised learning methods, correlation analysis, linear regression, modeling spatial and temporal data such as via hidden Markov models, data visualisation.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1808ICT",
+                    "2802ICT",
+                    "2030ICT"
+                ],
+                "logic": "OR",
+                "summary": "must have completed 1808ICT Discrete Structures AND must have completed 2802ICT Intelligent Systems OR must have completed 2030ICT Introduction to Big Data Analytics"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3805ICT",
+        "name": "Advanced Data Structures and Algorithms",
+        "description": "This course will introduce a selection of advanced algorithms from a variety of application domains including: dynamic programming, graph theory and algorithms, approximation algorithms, advanced data structures, geometric algorithms, randomised algorithms, information and coding theory and cryptographic algorithms. \n\nPre-Requisite: 2801ICT Computing Algorithms.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "2801ICT"
+                ],
+                "logic": "AND",
+                "summary": "must have completed 2801ICT Computing Algorithms"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3806ICT",
+        "name": "Robotics, Agents and Reasoning",
+        "description": "This course provides an introduction to the fields of robotics, intelligent agents and reasoning. Architectures and collaboration strategies for both robots and intelligent agents presented as well as issues specifically pertaining to each. The principles of reasoning are introduced, and their application in the context of robotics and intelligent agents is discussed.\n\nPre-Requisite: 1808ICT Discrete Structures or 2204NSC Introduction to Mathematical Modelling or 2802ICT Intelligent Systems",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1808ICT",
+                    "2204NSC",
+                    "2802ICT"
+                ],
+                "logic": "OR",
+                "summary": "must have completed 1808ICT Discrete Structures OR must have completed 2204NSC Introduction to Mathematical Modelling OR must have completed 2802ICT Intelligent Systems"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3808ICT",
+        "name": "Routing and Internetworking",
+        "description": "This course focuses on switching technologies and router operations that support small-to-medium sized-networks and includes wireless local area networks (WLAN) and security concepts. Students will also learn network configuration and troubleshooting, identify and mitigate LAN security threats. \n\nPre-Requisite: 2809ICT Computer Networking Essentials",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "2809ICT"
+                ],
+                "logic": "AND",
+                "summary": "must have completed 2809ICT Computer Networking Essentials"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3809ICT",
+        "name": "Ethical Hacking",
+        "description": "The Ethical Hacking course will provide students with a comprehensive understanding of the principles, techniques, and tools used in ethical hacking, also known as penetration testing or vulnerability assessment. This course aims to equip students with the knowledge and skills needed to identify and assess vulnerabilities in information systems and networks, and to understand the ethical and legal considerations associated with conducting authorized security testing. \n\nPrerequisite: 1007ICT Computer Systems and Cyber Security OR 1118ICT Introduction to Cyber Security OR 2905ICT Fundamentals of Cyber Security. \n\nThis course was previously known as 3809ICT Applied Network Security and is incompatible with 3809ICT Applied Network Security.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1007ICT",
+                    "1118ICT",
+                    "2905ICT"
+                ],
+                "logic": "OR",
+                "summary": "must have completed 1007ICT Computer Systems and Cyber Security OR must have completed 1118ICT Introduction to Cyber Security OR must have completed 2905ICT Fundamentals of Cyber Security"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL",
+            "SB"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3810ICT",
+        "name": "Information Systems Architecture",
+        "description": "The course introduces students to the concepts of Information Systems Architecture (ISA) and demonstrates how Information Systems, Engineering and Management views can be unified by an enterprise architecture approach. The course covers relevant international standards (ISO15704, ISO42010) and discusses frequently used industry frameworks (TOGAF, DoDAF, etc).\nPre-Requisite: 2511ICT Business Analysis or 3812ICT Agile Business Analysis",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "2511ICT",
+                    "3812ICT"
+                ],
+                "logic": "OR",
+                "summary": "must have completed 2511ICT Business Analysis OR must have completed 3812ICT Agile Business Analysis"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3811ICT",
+        "name": "Advanced Network Architectures",
+        "description": "This course covers the architectures and considerations related to the configuration, operation and troubleshooting of enterprise networks and WAN (Wide Area Network). After completing this subject, students should be prepared to undertake industry certification. \n\nPre-Requisite: 3808ICT Routing and Internetworking.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "3808ICT"
+                ],
+                "logic": "AND",
+                "summary": "must have completed 3808ICT Routing and Internetworking"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3812ICT",
+        "name": "Agile Business Analysis",
+        "description": "Traditional IT project management approaches work well under stable conditions, when intended project outcomes are well understood. Yet, under conditions of delivering value to clients early, in innovation projects, or new product development, traditional methods of software development are often too restrictive and inflexible. This course offers an alternative approach to software development that values flexibility, time-to-market and self-organisation over rigorous planning and processes. This course is based on the IIBA's Agile Extension to the BABOK.\n\nPre-requisites: 140CP and 1802ICT Foundations of Systems Development or 2813ICT Software Engineering Fundamentals.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "units",
+                "amount": 140,
+                "summary": "the student must have achieved at least 140 credit points prior to enrolment AND must have completed 1802ICT Foundations of Systems Development OR must have completed 2813ICT Software Engineering Fundamentals"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3813ICT",
+        "name": "Software Frameworks",
+        "description": "Modern software frameworks reduce development time and provide a solid foundation for building high quality software applications. This course covers full-stack development of real-world software applications using the selected frameworks. \n\nPrerequisite: Programming Principles (2807ICT for BIT students or 1811ICT for BCS students)\n\nIncompatible: 2811ICT Web Programming.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "2807ICT",
+                    "1811ICT"
+                ],
+                "logic": "OR",
+                "summary": "must have completed 2807ICT Programming Principles OR must have completed 1811ICT Programming Principles"
+            }
+        ],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "2811ICT"
+                ],
+                "summary": "must not have completed 2811ICT Web Programming"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3820ICT_P1",
+        "name": "Work Integrated Learning Part 1",
+        "description": "In this course, students participate in a project-based engagement with a real client. Projects are sought from a range of industry and university partners (project sponsors) that require significant development, communication and documentation effort. A project problem is addressed by a number of students working in a group to form a student project team. Significant importance is placed on effective project management and excellent communication strategies between team members, the project manager, and with the client. Students work in close liaison with their client and academic assessor throughout the project and are expected to demonstrate a good understanding of their project.\n\nTo be eligible for this course, students must have registered online with the Griffith Sciences Partnership Office in the trimester prior to enrolment. Please contact wil-gs@griffith.edu.au to register. If your registration is successful, you will be given permission to enrol prior to the start of the trimester.\n\nPre-requisite: Must have completed 160 credit points with at least 20 credit points from the major subjects which define the program. Student must also contact wil-gs@griffith.edu.au to register for enrolment.",
+        "credit_points": 0,
+        "prerequisites": [
+            {
+                "type": "units",
+                "amount": 160,
+                "summary": "the student must have achieved at least 160 credit points prior to enrolment"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3820ICT_P2",
+        "name": "Work Integrated Learning Part 2",
+        "description": "In this course, students participate in a project-based engagement with a real client. Projects are sought from a range of industry and university partners (project sponsors) that require significant development, communication and documentation effort. A project problem is addressed by a number of students working in a group to form a student project team. Significant importance is placed on effective project management and excellent communication strategies between team members, the project manager, and with the client. Students work in close liaison with their client and academic assessor throughout the project and are expected to demonstrate a good understanding of their project. \n\nTo be eligible for this course, students must have registered online with the Griffith Sciences Partnership Office in the trimester prior to enrolment. Please contact wil-gs@griffith.edu.au to register. If your registration is successful, you will be given permission to enrol prior to the start of the trimester.\n\nPre-requisite: Must have completed 160CP with at least 20CP from the major subjects which define the program. 3820ICT_P2 is a continuation of 3820ICT_P1.",
+        "credit_points": 20,
+        "prerequisites": [
+            {
+                "type": "units",
+                "amount": 160,
+                "summary": "the student must have achieved at least 160 credit points prior to enrolment"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3821ICT",
+        "name": "Work Integrated Learning - Single Project",
+        "description": "In this course students participate in a project-based engagement with a real client. Projects are sought from a range of industry and university partners (project sponsors) that require significant development, communication and documentation effort. A project problem is addressed by a number of students working in a group to form a student project team. Significant importance is placed on effective project management and excellent communication strategies between team members, the project manager, and with the client. Students work in close liaison with their client and academic assessor throughout the project and are expected to demonstrate a good understanding of their project. \n\nTo be eligible for this course, students must have registered online with the Griffith Sciences Partnership Office in the trimester prior to enrolment. Please contact wil-gs@griffith.edu.au to register. If your registration is successful, you will be given permission to enrol prior to the start of the trimester.\n\nPre-requisite: Must have completed 160CP with at least 20CP from the major subjects which define the program.",
+        "credit_points": 20,
+        "prerequisites": [
+            {
+                "type": "units",
+                "amount": 160,
+                "summary": "the student must have achieved at least 160 credit points prior to enrolment"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3822ICT",
+        "name": "Work Integrated Learning - Placement",
+        "description": "In this course, students conduct an industry-based placement within a commercial or industrial environment under professional supervision while managing their learning and course assessment. The placement provides students with the opportunity to undertake a substantial body of work that has an industry application and brings together the wide range of knowledge and skills already developed in earlier courses within their degree program. The aim is for students to develop the necessary attributes, skills and competencies expected in a graduate/postgraduate professional while working within a relevant workplace while under the guidance and direction of an Industry Partner. \n\nTo be eligible for this course, students must have registered online with the Griffith Sciences Partnership Office in the trimester prior to enrolment. Please contact wil-gs@griffith.edu.au to register. If your registration is successful, you will be given permission to enrol prior to the start of the trimester.\n\nPrerequisites: must have completed 160 credit points which define the program with at least 20 credit points from the major and have a cumulative GPA of 5.0 at the time of registration.",
+        "credit_points": 20,
+        "prerequisites": [
+            {
+                "type": "units",
+                "amount": 160,
+                "summary": "the student must have achieved at least 160 credit points prior to enrolment"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "LG",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3825ICT",
+        "name": "Theory of Computing",
+        "description": "This course will provide an introduction to the traditional theory of computation and some other important theories in computer science such as quantum computation. The theory of computation is the core area of computer science that attempts to achieve deep understanding of computational processes by means of mathematical models, tools, and techniques. It is important for algorithm, compiler and VLSI design, the creation of intelligent systems, and cognitive psychology. This course aims to provide generic skills and concept tools that practitioners use in computer engineering. For instance, grammars studied in this course are useful in dealing with strong searching and pattern matching. Studying this course significantly helps in training generic abilities to think and to solve computational problems. \n\nThe course will cover a selection of topics from the following: \n1. Finite state machines, regular languages \n2. Turing machines and computational complexity \n3. Recursive functions and Lambda calculus \n4. Cellular automata \n5. Quantum computation and its applications \n5. Context free languages 6. Number theory \n7. Information and coding theory \n8. Cryptographic algorithms\n\nPre-requisite: 2801ICT Computing Algorithms or equivalent\nIncompatible: 2815ICT Theory of Computing",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "2801ICT"
+                ],
+                "logic": "AND",
+                "summary": "must have completed 2801ICT Computing Algorithms"
+            }
+        ],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "2815ICT"
+                ],
+                "summary": "must not have completed 2815ICT Theory of Computing"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3906ICT",
+        "name": "Digital Forensics",
+        "description": "This course introduces forensic techniques and procedures required to investigate, detect and prevent digital crimes. The course covers the knowledge on digital crime, forensics processes and procedures, data acquisition and validation, e-discovery tools, e-evidence collection and preservation, investigating operating systems and file systems, network forensics, art of steganography and mobile device forensics, email and web forensics, presenting reports and testimony as an expert witness. By the end of the course students should be able to write and analyse simple forensic tools as well as being able to use them. \n\nPrerequisites: 1007ICT Computer Systems and Cyber Security OR 1807ICT Computer and Network Architecture OR 2905ICT Fundamentals of Cyber Security OR 1118ICT Introduction to Cyber Security.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1007ICT",
+                    "1807ICT",
+                    "2905ICT",
+                    "1118ICT"
+                ],
+                "logic": "OR",
+                "summary": "must have completed 1007ICT Computer Systems and Cyber Security OR must have completed 1807ICT Computer and Network Architecture OR must have completed 2905ICT Fundamentals of Cyber Security OR must have completed 1118ICT Introduction to Cyber Security"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "5903LHS",
+        "name": "Language and Communication for Sciences",
+        "description": "Language and Communication for Sciences is offered to students from a non-English speaking background (NESB). Students whose first language is English are NOT PERMITTED to undertake this course. The aim of this course is to introduce students to the language, knowledge and communication skills required for study and practice in their discipline. A further aim is to develop and practice English language skills relevant to the academic culture of Australian universities. It therefore involves intensive English language practice and language immersion activities, with elements applied to contextualised, discipline-specific settings. This course constitutes part of the overall English Language Enhancement Strategy at Griffith University. \nPrerequisites: NIL; \nIncompatible: 5901LHS/5901LAL, 5902LHS/5902LAL, 5904LHS/5904LAL and 5903LAL.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "5901LHS",
+                    "5902LHS",
+                    "5904LHS"
+                ],
+                "summary": "must not have completed 1 of 5901LHS Language and Communication for Business and Commerce/5902LHS Language and Communication for Health/5904LHS Language and Communication for Arts and Social Sciences"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
+            "Trimester 2",
+            "Trimester 3"
+        ],
+        "academic_level": "Undergraduate"
+    }
+]
