@@ -14,29 +14,43 @@ document.addEventListener('DOMContentLoaded', () => {
     let programSelect, majorSelect, plannerContainer, plannerScrollArea, creditPointCounter,
         coursePoolTabs, clearPlanBtn, addTrimesterBtn, coursePoolContent,
         electiveFilters, modal, coursePoolContainer, shareModal, sharePlanBtn,
-        closeShareModalBtn, shareUrlInput, copyLinkBtn, copyFeedback;
+        closeShareModalBtn, shareUrlInput, copyLinkBtn, copyFeedback,
+        addCustomCourseBtn, customCourseModal, customCourseForm, closeCustomModalBtn;
 
     // --- Data Management ---
     const saveData = () => {
-        const dataToSave = { programCode: selectedProgram?.code, majorName: selectedMajor?.name, plan: plan };
+        const customCourses = allCourses.filter(c => c.isCustom);
+        const dataToSave = {
+            programCode: selectedProgram?.code,
+            majorName: selectedMajor?.name,
+            plan: plan,
+            customCourses: customCourses.length > 0 ? customCourses : undefined
+        };
         localStorage.setItem('degreePlannerData', JSON.stringify(dataToSave));
     };
 
     const loadData = async () => {
         try {
-            const [coursesRes, programsRes] = await Promise.all([fetch(window.location.href + 'courses.json'), fetch('programs.json')]);
+            const [coursesRes, programsRes] = await Promise.all([fetch('courses.json'), fetch('programs.json')]);
             if (!coursesRes.ok || !programsRes.ok) throw new Error('Failed to fetch data files.');
             allCourses = await coursesRes.json();
             allPrograms = await programsRes.json();
 
-            // Check for share data in URL first
             const urlParams = new URLSearchParams(window.location.search);
             const planData = urlParams.get('plan');
             if (planData) {
                 return loadPlanFromURL(planData);
             }
 
-            return JSON.parse(localStorage.getItem('degreePlannerData'));
+            const savedData = JSON.parse(localStorage.getItem('degreePlannerData'));
+            if (savedData?.customCourses && Array.isArray(savedData.customCourses)) {
+                savedData.customCourses.forEach(customCourse => {
+                    if (!allCourses.some(c => c.code === customCourse.code)) {
+                        allCourses.push(customCourse);
+                    }
+                });
+            }
+            return savedData;
         } catch (error) {
             console.error("Fatal Error:", error);
             if (plannerContainer) plannerContainer.innerHTML = `<p class="text-center text-red-400">Could not load data.</p>`;
@@ -49,17 +63,21 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!selectedProgram) return null;
 
         const compactPlan = plan.map(tri => {
-            // Format: year-trimester:COURSE1,COURSE2
             return `${tri.year}-${tri.trimester}:${tri.courses.join(',')}`;
-        }).join('|'); // Use pipe to separate trimesters
+        }).join('|');
+
+        // Find any custom courses present in the plan
+        const customCoursesInPlan = plan.flatMap(p => p.courses)
+            .map(code => getCourseByCode(code))
+            .filter(c => c && c.isCustom);
 
         const data = {
             p: selectedProgram.code,
             m: selectedMajor ? selectedMajor.name : '',
-            t: compactPlan
+            t: compactPlan,
+            c: customCoursesInPlan.length > 0 ? customCoursesInPlan : undefined
         };
 
-        // Encode the JSON string to a URL-safe Base64 string
         return btoa(JSON.stringify(data));
     };
 
@@ -67,6 +85,16 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const decodedString = atob(encodedData);
             const data = JSON.parse(decodedString);
+
+            // If there are custom courses in the URL, add them to our master list
+            if (data.c && Array.isArray(data.c)) {
+                data.c.forEach(customCourse => {
+                    // Avoid adding duplicates if already present
+                    if (!allCourses.some(c => c.code === customCourse.code)) {
+                        allCourses.push(customCourse);
+                    }
+                });
+            }
 
             const loadedPlan = data.t.split('|').map(triString => {
                 if (!triString) return null;
@@ -78,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     trimester: parseInt(trimester, 10),
                     courses: coursesStr ? coursesStr.split(',') : []
                 };
-            }).filter(Boolean); // Filter out any null entries from empty strings
+            }).filter(Boolean);
 
             return {
                 programCode: data.p,
@@ -89,7 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (e) {
             console.error("Failed to parse share data from URL", e);
             alert("The provided share link is invalid or corrupted.");
-            // Clear the invalid parameter from the URL
             window.history.replaceState({}, document.title, window.location.pathname);
             return null;
         }
@@ -108,12 +135,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const allPlannedCourses = plan.flatMap(p => p.courses);
         const coursesCompletedBefore = plan.slice(0, plannedTriIndex).flatMap(p => p.courses);
 
-        const isOffered = course.trimesters_offered && Object.keys(course.trimesters_offered).includes(plan[plannedTriIndex].trimester.toString());
+        // For custom courses, we assume they are always offered
+        const isOffered = course.isCustom || (course.trimesters_offered && Object.keys(course.trimesters_offered).includes(plan[plannedTriIndex].trimester.toString()));
 
         let antiReqConflict = false;
         if (course.anti_requisites?.length > 0) {
             const antiReqCodes = course.anti_requisites.flatMap(ar => ar.codes || []);
-            // Check for conflict only with OTHER courses in the plan
             antiReqConflict = allPlannedCourses.some(c => antiReqCodes.includes(c) && c !== course.code);
         }
 
@@ -246,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const errorTooltip = validation.messages.join(' \n');
 
         return `
-            <tr class="planned-course-row bg-indigo-900/40 hover:bg-indigo-900/60" title="${errorTooltip}" data-course-code="${course.code}">
+            <tr class="planned-course-row bg-indigo-800/40 hover:bg-indigo-800/60" title="${errorTooltip}" data-course-code="${course.code}">
                 <td class="p-2 text-center drag-handle" draggable="true"><i class="fas fa-grip-vertical"></i></td>
                 <td class="p-2">${course.code}</td>
                 <td class="p-2">${course.name}
@@ -265,7 +292,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const formatBadges = (items, colorClass) => {
-        if (!items || items.length === 0) return '<span class="text-gray-500">N/A</span>';
+        //if (!items || items.length === 0) return '<span class="text-gray-500">N/A</span>';
+        if (!items || items.length === 0) return '';
         return items.map(item => `<span class="badge ${colorClass}">${item.replace('Trimester ', 'T')}</span>`).join(' ');
     };
 
@@ -298,7 +326,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const renderCoursePill = (course) => {
         if (!course) return '';
         return `
-            <div class="course-pill p-3 rounded-lg bg-gray-700 border border-gray-600 hover:bg-gray-600/80" data-course-code="${course.code}" draggable="true">
+            <div class="course-pill p-2 rounded-lg bg-gray-700 border border-gray-600 hover:bg-gray-600/80" data-course-code="${course.code}" draggable="true">
                 <p class="font-bold text-sm">${course.code} <span class="font-normal text-gray-300">${course.name}</span></p>
                 <div class="text-xs text-gray-400 mt-2 pt-2 border-t border-gray-600 flex justify-between items-center">
                    <div>
@@ -466,6 +494,44 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => { copyFeedback.textContent = ''; }, 2000);
     };
 
+    const handleSaveCustomCourse = (e) => {
+        e.preventDefault();
+        const formData = new FormData(customCourseForm);
+        const code = formData.get('code').toUpperCase();
+        const name = formData.get('name');
+        const credits = parseInt(formData.get('credits'), 10);
+        const description = formData.get('description');
+
+        if (!code || !name || !credits) {
+            alert('Code, Name, and Credit Points are required.');
+            return;
+        }
+
+        if (allCourses.some(c => c.code === code)) {
+            alert('A course with this code already exists.');
+            return;
+        }
+
+        const newCourse = {
+            code, name, credit_points: credits, description,
+            isCustom: true,
+            campuses: [], trimesters_offered: {}, prerequisites: [], anti_requisites: []
+        };
+        allCourses.push(newCourse);
+
+        // Add to the first trimester by default
+        if (plan.length > 0) {
+            plan[0].courses.push(code);
+        } else {
+            // Or create a trimester if none exist
+            plan.push({ id: crypto.randomUUID(), year: new Date().getFullYear(), trimester: 1, courses: [code] });
+        }
+
+        customCourseForm.reset();
+        customCourseModal.classList.add('hidden');
+        rerender();
+    };
+
     // --- Drag and Drop Logic ---
     function handleDragStart(e) {
         const draggableElement = e.target.closest('[data-course-code]');
@@ -541,6 +607,10 @@ document.addEventListener('DOMContentLoaded', () => {
         shareUrlInput = document.getElementById('share-url-input');
         copyLinkBtn = document.getElementById('copy-link-btn');
         copyFeedback = document.getElementById('copy-feedback');
+        addCustomCourseBtn = document.getElementById('add-custom-course-btn');
+        customCourseModal = document.getElementById('custom-course-modal');
+        customCourseForm = document.getElementById('custom-course-form');
+        closeCustomModalBtn = document.getElementById('close-custom-modal-btn');
 
         if (!coursePoolContainer) {
             console.error("Initialization failed: #course-pool-content not found.");
@@ -592,6 +662,9 @@ document.addEventListener('DOMContentLoaded', () => {
         sharePlanBtn.addEventListener('click', handleShareClick);
         copyLinkBtn.addEventListener('click', handleCopyLink);
         closeShareModalBtn.addEventListener('click', () => shareModal.classList.add('hidden'));
+        addCustomCourseBtn.addEventListener('click', () => customCourseModal.classList.remove('hidden'));
+        closeCustomModalBtn.addEventListener('click', () => customCourseModal.classList.add('hidden'));
+        customCourseForm.addEventListener('submit', handleSaveCustomCourse);
         modal.closeBtn.addEventListener('click', closeCourseModal);
         modal.container.addEventListener('click', e => { if (e.target === modal.container) closeCourseModal(); });
         electiveFilters.search.addEventListener('input', renderCoursePool);

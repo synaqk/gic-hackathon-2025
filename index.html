@@ -30,8 +30,16 @@
             min-height: 0; /* Important for flex children that need to scroll */
         }
 
-        #planner-container, #course-pool-content {
-            /*overflow-y: auto;*/
+        #planner-container {
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #374151 #111827;
+        }
+
+        #course-pool-content {
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #374151 #1f2937;
         }
 
         .badge {
@@ -107,9 +115,7 @@
             <div class="flex flex-wrap items-center gap-x-6 gap-y-4 text-sm">
                 <div class="flex items-center gap-2">
                     <label for="program-select" class="font-medium text-gray-300">Program:</label>
-                    <select id="program-select" class="bg-gray-700 border border-gray-600 rounded-md p-2 text-white focus:ring-indigo-500 focus:border-indigo-500">
-                        <option="">Select a Degree Program</option>
-                    </select>
+                    <select id="program-select" class="bg-gray-700 border border-gray-600 rounded-md p-2 text-white focus:ring-indigo-500 focus:border-indigo-500"></select>
                 </div>
                 <div class="flex items-center gap-2">
                     <label for="major-select" class="font-medium text-gray-300">Major:</label>
@@ -129,7 +135,7 @@
 
             <!-- Left Side: The Degree Plan -->
             <main class="lg:col-span-2 flex flex-col min-h-0">
-                <div id="planner-container" class="flex-grow pr-2 overflow-y-auto">
+                <div id="planner-container" class="flex-grow">
                     <!-- Trimester sections will be generated here by JavaScript -->
                 </div>
                 <div class="flex-shrink-0 pt-4">
@@ -141,26 +147,26 @@
 
             <!-- Right Side: Course Selection Pool -->
             <aside class="bg-gray-800 rounded-xl border border-gray-700 h-full flex flex-col overflow-y-auto">
-                <div class="p-4 flex-shrink-0">
+                <div class="px-3 py-2 flex-shrink-0">
                     <div class="flex items-baseline justify-between">
                         <h2 class="text-xl font-bold text-white">Available Courses</h2>
                     </div>
                 </div>
                 <!-- Tabs -->
-                <div class="px-4 border-b border-gray-600 flex-shrink-0">
+                <div class="px-2 border-b border-gray-600 flex-shrink-0">
                     <nav class="-mb-px flex space-x-6" id="course-pool-tabs">
-                        <button data-tab="core" class="tab-btn whitespace-nowrap py-3 px-1 border-b-2 font-medium text-sm border-indigo-500 text-indigo-400">Core</button>
-                        <button data-tab="coreOptions" class="tab-btn whitespace-nowrap py-3 px-1 border-b-2 font-medium text-sm border-transparent text-gray-400 hover:text-gray-200 hover:border-gray-400">Core Options</button>
-                        <button data-tab="major" class="tab-btn whitespace-nowrap py-3 px-1 border-b-2 font-medium text-sm border-transparent text-gray-400 hover:text-gray-200 hover:border-gray-400">Major</button>
-                        <button data-tab="electives" class="tab-btn whitespace-nowrap py-3 px-1 border-b-2 font-medium text-sm border-transparent text-gray-400 hover:text-gray-200 hover:border-gray-400">Electives</button>
+                        <button data-tab="core" class="tab-btn whitespace-nowrap py-2 px-1 border-b-2 font-medium text-sm border-indigo-500 text-indigo-400">Core</button>
+                        <button data-tab="coreOptions" class="tab-btn whitespace-nowrap py-2 px-1 border-b-2 font-medium text-sm border-transparent text-gray-400 hover:text-gray-200 hover:border-gray-400">Core Options</button>
+                        <button data-tab="major" class="tab-btn whitespace-nowrap py-2 px-1 border-b-2 font-medium text-sm border-transparent text-gray-400 hover:text-gray-200 hover:border-gray-400">Major</button>
+                        <button data-tab="electives" class="tab-btn whitespace-nowrap py-2 px-1 border-b-2 font-medium text-sm border-transparent text-gray-400 hover:text-gray-200 hover:border-gray-400">Electives</button>
                     </nav>
                 </div>
                 <!-- This is the container that holds the lists -->
-                <div id="course-pool-content" class="flex-grow p-4 min-h-0 course-pool-list-container">
+                <div id="course-pool-content" class="flex-grow p-2 min-h-0 course-pool-list-container">
                     <!-- Elective Filters (only shown on elective tab) -->
-                    <div id="elective-filters" class="hidden space-y-4 mb-4">
+                    <div id="elective-filters" class="hidden space-y-2 mb-2">
                         <input type="text" id="elective-search" placeholder="Search electives..." class="w-full bg-gray-700 border-gray-600 rounded-md p-2 text-sm">
-                        <div class="grid grid-cols-2 gap-4">
+                        <div class="grid grid-cols-2 gap-2">
                             <select id="campus-filter" class="bg-gray-700 border-gray-600 rounded-md p-2 text-sm">
                                 <option value="">All Campuses</option>
                                 <option value="SB">Brisbane City (South Bank)</option>
@@ -183,6 +189,11 @@
                     <div id="core-options-courses-list" class="course-list hidden space-y-2"></div>
                     <div id="major-courses-list" class="course-list hidden space-y-2"></div>
                     <div id="electives-courses-list" class="course-list hidden space-y-2"></div>
+                    <div id="add-custom-course-container" class="mt-4 pt-4 border-t border-gray-700">
+                        <button id="add-custom-course-btn" class="w-full px-4 py-2 bg-green-800 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors text-sm">
+                            <i class="fas fa-plus-circle mr-2"></i>Add Custom Course
+                        </button>
+                    </div>
                 </div>
             </aside>
         </div>
@@ -193,8 +204,8 @@
         <div id="modal-content" class="bg-gray-800 rounded-xl shadow-2xl w-full max-w-2xl relative border border-gray-700 flex flex-col max-h-[90vh]">
             <!-- Modal Header -->
             <div class="p-6 border-b border-gray-700">
-                <h2 id="modal-title" class="text-2xl font-bold text-white">Course Details</h2>
-                <p id="modal-code" class="text-lg text-indigo-400"></p>
+                <span id="modal-code" class="text-lg font-bold text-white"></span> <span id="modal-title" class="text-lg text-white">Course Details</span>
+                <!--<p id="modal-code" class="text-lg text-indigo-400"></p>-->
             </div>
             <!-- Modal Body -->
             <div class="p-6 space-y-4 overflow-y-auto">
@@ -245,6 +256,38 @@
             </button>
         </div>
     </div>
+
+    <!-- Custom Course Modal -->
+    <div id="custom-course-modal" class="fixed inset-0 modal-backdrop flex items-center justify-center p-4 z-50 hidden">
+        <form id="custom-course-form" class="bg-gray-800 rounded-xl shadow-2xl w-full max-w-lg relative border border-gray-700">
+            <div class="p-6 border-b border-gray-700">
+                <h2 class="text-2xl font-bold text-white">Add Custom Course</h2>
+            </div>
+            <div class="p-6 space-y-4">
+                <div>
+                    <label for="custom-code" class="block text-sm font-medium text-gray-300 mb-1">Course Code</label>
+                    <input type="text" id="custom-code" name="code" required class="w-full bg-gray-700 border border-gray-600 rounded-md p-2 text-white placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500" placeholder="e.g., INTERN101">
+                </div>
+                <div>
+                    <label for="custom-name" class="block text-sm font-medium text-gray-300 mb-1">Course Name</label>
+                    <input type="text" id="custom-name" name="name" required class="w-full bg-gray-700 border border-gray-600 rounded-md p-2 text-white placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500" placeholder="e.g., Special Research Project">
+                </div>
+                <div>
+                    <label for="custom-credits" class="block text-sm font-medium text-gray-300 mb-1">Credit Points</label>
+                    <input type="number" id="custom-credits" name="credits" value="10" required class="w-full bg-gray-700 border border-gray-600 rounded-md p-2 text-white placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+                <div>
+                    <label for="custom-description" class="block text-sm font-medium text-gray-300 mb-1">Description (Optional)</label>
+                    <textarea id="custom-description" name="description" rows="3" class="w-full bg-gray-700 border border-gray-600 rounded-md p-2 text-white placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                </div>
+            </div>
+            <div class="p-4 bg-gray-800/50 border-t border-gray-700 flex justify-end gap-4">
+                <button type="button" id="close-custom-modal-btn" class="px-4 py-2 bg-gray-600 text-white font-semibold rounded-lg hover:bg-gray-500 transition-colors">Cancel</button>
+                <button type="submit" class="px-4 py-2 bg-green-700 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors">Save and Add</button>
+            </div>
+        </form>
+    </div>
+
 
 </body>
 </html>
