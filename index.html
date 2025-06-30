@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>University Degree Planner</title>
+    <title>Griffith ICT Undergrad Degree Planner</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -101,18 +101,23 @@
         <!-- Header Section -->
         <header class="flex-shrink-0 flex flex-col md:flex-row items-center justify-between mb-6 gap-4">
             <div>
-                <h1 class="text-4xl font-bold text-white">Degree Planner</h1>
+                <h1 class="text-4xl font-bold text-white">ICT Degree Planner</h1>
                 <p id="credit-point-counter" class="text-gray-400 mt-1">Total Credit Points: 0 / 240</p>
             </div>
-            <div class="flex flex-wrap items-center gap-x-6 gap-y-4">
+            <div class="flex flex-wrap items-center gap-x-6 gap-y-4 text-sm">
                 <div class="flex items-center gap-2">
                     <label for="program-select" class="font-medium text-gray-300">Program:</label>
-                    <select id="program-select" class="bg-gray-700 border border-gray-600 rounded-md p-2 text-white focus:ring-indigo-500 focus:border-indigo-500"></select>
+                    <select id="program-select" class="bg-gray-700 border border-gray-600 rounded-md p-2 text-white focus:ring-indigo-500 focus:border-indigo-500">
+                        <option="">Select a Degree Program</option>
+                    </select>
                 </div>
                 <div class="flex items-center gap-2">
                     <label for="major-select" class="font-medium text-gray-300">Major:</label>
                     <select id="major-select" class="bg-gray-700 border border-gray-600 rounded-md p-2 text-white focus:ring-indigo-500 focus:border-indigo-500"></select>
                 </div>
+                <button id="share-plan-btn" class="px-3 py-2 bg-green-700 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors text-sm">
+                    <i class="fas fa-share-alt mr-2"></i>Share
+                </button>
                 <button id="clear-plan-btn" class="px-3 py-2 bg-red-700 text-white font-semibold rounded-lg hover:bg-red-600 transition-colors text-sm">
                     <i class="fas fa-trash-alt mr-2"></i>Clear Plan
                 </button>
@@ -124,7 +129,7 @@
 
             <!-- Left Side: The Degree Plan -->
             <main class="lg:col-span-2 flex flex-col min-h-0">
-                <div id="planner-container" class="flex-grow space-y-4 pr-2 overflow-y-auto">
+                <div id="planner-container" class="flex-grow pr-2 overflow-y-auto">
                     <!-- Trimester sections will be generated here by JavaScript -->
                 </div>
                 <div class="flex-shrink-0 pt-4">
@@ -222,5 +227,24 @@
             </div>
         </div>
     </div>
+
+    <!-- Share Modal -->
+    <div id="share-modal" class="fixed inset-0 modal-backdrop flex items-center justify-center p-4 z-50 hidden">
+        <div class="bg-gray-800 rounded-xl shadow-2xl w-full max-w-xl relative border border-gray-700">
+            <div class="p-6">
+                <h2 class="text-2xl font-bold text-white">Share Your Plan</h2>
+                <p class="text-gray-400 mt-2 mb-4">Copy the link below to share your current degree plan.</p>
+                <div class="flex items-center gap-2">
+                    <input type="text" id="share-url-input" readonly class="w-full bg-gray-900 border border-gray-600 rounded-md p-2 text-indigo-300">
+                    <button id="copy-link-btn" class="px-4 py-2 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-500 transition-colors">Copy</button>
+                </div>
+                <p id="copy-feedback" class="text-sm text-green-400 h-4 mt-2"></p>
+            </div>
+            <button id="close-share-modal-btn" class="absolute top-4 right-4 text-gray-500 hover:text-white">
+                <i class="fas fa-times fa-lg"></i>
+            </button>
+        </div>
+    </div>
+
 </body>
 </html>

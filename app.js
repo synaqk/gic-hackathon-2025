@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- DOM Elements (will be assigned in initializeApp) ---
     let programSelect, majorSelect, plannerContainer, plannerScrollArea, creditPointCounter,
         coursePoolTabs, clearPlanBtn, addTrimesterBtn, coursePoolContent,
-        electiveFilters, modal, coursePoolContainer;
+        electiveFilters, modal, coursePoolContainer, shareModal, sharePlanBtn,
+        closeShareModalBtn, shareUrlInput, copyLinkBtn, copyFeedback;
 
     // --- Data Management ---
     const saveData = () => {
@@ -23,15 +24,81 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const loadData = async () => {
         try {
-            const [coursesRes, programsRes] = await Promise.all([fetch(window.location.href + '/courses.json'), fetch(window.location.href + '/programs.json')]);
+            const [coursesRes, programsRes] = await Promise.all([fetch('/courses.json'), fetch('/programs.json')]);
             if (!coursesRes.ok || !programsRes.ok) throw new Error('Failed to fetch data files.');
             allCourses = await coursesRes.json();
             allPrograms = await programsRes.json();
+
+            // Check for share data in URL first
+            const urlParams = new URLSearchParams(window.location.search);
+            const planData = urlParams.get('plan');
+            if (planData) {
+                return loadPlanFromURL(planData);
+            }
+
             return JSON.parse(localStorage.getItem('degreePlannerData'));
         } catch (error) {
             console.error("Fatal Error:", error);
             if (plannerContainer) plannerContainer.innerHTML = `<p class="text-center text-red-400">Could not load data.</p>`;
             return null;
+        }
+    };
+
+    // --- Share/Export Logic ---
+    const generateShareData = () => {
+        if (!selectedProgram) return null;
+
+        const compactPlan = plan.map(tri => {
+            // Format: year-trimester:COURSE1,COURSE2
+            return `${tri.year}-${tri.trimester}:${tri.courses.join(',')}`;
+        }).join('|'); // Use pipe to separate trimesters
+
+        const data = {
+            p: selectedProgram.code,
+            m: selectedMajor ? selectedMajor.name : '',
+            t: compactPlan
+        };
+
+        // Encode the JSON string to a URL-safe Base64 string
+        return btoa(JSON.stringify(data));
+    };
+
+    const loadPlanFromURL = (encodedData) => {
+        try {
+            const decodedString = atob(encodedData);
+            const data = JSON.parse(decodedString);
+
+            const loadedPlan = data.t.split('|').map(triString => {
+                if (!triString) return null;
+                const [yearTri, coursesStr] = triString.split(':');
+                const [year, trimester] = yearTri.split('-');
+                return {
+                    id: crypto.randomUUID(),
+                    year: parseInt(year, 10),
+                    trimester: parseInt(trimester, 10),
+                    courses: coursesStr ? coursesStr.split(',') : []
+                };
+            }).filter(Boolean); // Filter out any null entries from empty strings
+
+            return {
+                programCode: data.p,
+                majorName: data.m,
+                plan: loadedPlan
+            };
+
+        } catch (e) {
+            console.error("Failed to parse share data from URL", e);
+            alert("The provided share link is invalid or corrupted.");
+            // Clear the invalid parameter from the URL
+            window.history.replaceState({}, document.title, window.location.pathname);
+            return null;
+        }
+    };
+
+    const clearUrlPlanParameter = () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('plan')) {
+            window.history.replaceState({}, document.title, window.location.pathname);
         }
     };
 
@@ -70,6 +137,33 @@ document.addEventListener('DOMContentLoaded', () => {
         return { isValid, messages };
     };
 
+    // --- Plan Generation ---
+    const generateEmptyPlan = () => {
+        if (!selectedProgram) return;
+
+        const totalCP = selectedProgram.creditPoints || 240;
+        const coursesPerTri = 4; // Assuming 40CP per trimester
+        const trimestersNeeded = Math.ceil(totalCP / 10 / coursesPerTri);
+
+        const newPlan = [];
+        let currentYear = new Date().getFullYear();
+        let currentTri = 1;
+
+        for (let i = 0; i < trimestersNeeded; i++) {
+            newPlan.push({ id: crypto.randomUUID(), year: currentYear, trimester: currentTri, courses: [] });
+
+            // Assume standard full-time study in T1 and T2
+            if (currentTri === 1) {
+                currentTri = 2;
+            } else {
+                currentTri = 1;
+                currentYear++;
+            }
+        }
+
+        plan = newPlan;
+    };
+
     // --- Core Rendering Functions ---
     const rerender = () => {
         renderPlannerGrid();
@@ -106,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const renderTrimesterSection = (trimesterData, triIndex) => {
         const sectionEl = document.createElement('div');
-        sectionEl.className = 'p-4 bg-gray-800/50 rounded-lg';
+        sectionEl.className = 'bg-gray-800/50';
         sectionEl.dataset.id = trimesterData.id;
 
         const currentYear = new Date().getFullYear();
@@ -114,10 +208,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const coursesHTML = (trimesterData.courses || []).map(code => renderCourseRow(getCourseByCode(code), triIndex)).join('');
 
         sectionEl.innerHTML = `
-            <div class="flex justify-between items-center mb-3">
+            <div class="flex justify-between items-center p-2">
                 <div class="flex items-center gap-4 text-xs">
-                    <select data-type="year" class="year-select bg-gray-700 border-gray-600 rounded-md p-2 text-white focus:ring-indigo-500 focus:border-indigo-500">${yearOptions}</select>
-                    <select data-type="trimester" class="trimester-select bg-gray-700 border-gray-600 rounded-md p-2 text-white focus:ring-indigo-500 focus:border-indigo-500">
+                    <select data-type="year" class="year-select bg-gray-700 border-gray-600 rounded-md p-1 text-white focus:ring-indigo-500 focus:border-indigo-500">${yearOptions}</select>
+                    <select data-type="trimester" class="trimester-select bg-gray-700 border-gray-600 rounded-md p-1 text-white focus:ring-indigo-500 focus:border-indigo-500">
                         <option value="1" ${trimesterData.trimester === 1 ? 'selected' : ''}>Trimester 1</option>
                         <option value="2" ${trimesterData.trimester === 2 ? 'selected' : ''}>Trimester 2</option>
                         <option value="3" ${trimesterData.trimester === 3 ? 'selected' : ''}>Trimester 3</option>
@@ -129,11 +223,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 <table class="planner-table">
                     <thead class="text-xs text-gray-400 uppercase bg-gray-900/30">
                         <tr>
-                            <th class="p-2 w-8"></th>
-                            <th class="p-2 text-left w-24">Code</th>
-                            <th class="p-2 text-left w-auto">Name</th>
-                            <th class="p-2 text-left w-1/3">Requisites</th>
-                            <th class="p-2 text-right w-20"></th>
+                            <th class="p-1 w-8"></th>
+                            <th class="p-1 text-left w-24">Code</th>
+                            <th class="p-1 text-left w-auto">Name</th>
+                            <th class="p-1 text-left w-1/3">Requisites</th>
+                            <th class="p-1 text-right w-20"></th>
                         </tr>
                     </thead>
                     <tbody class="trimester-slot divide-y divide-gray-700 text-xs">
@@ -281,13 +375,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Event Handlers ---
     const handleProgramChange = () => {
         selectedProgram = allPrograms.find(p => p.code === parseInt(programSelect.value, 10));
-        plan = [];
         renderMajorSelect(null);
-        handleMajorChange();
+        selectedMajor = selectedProgram.major ? selectedProgram.major.find(m => m.name === majorSelect.value) : null;
+        rerender();
     };
     const handleMajorChange = () => {
         selectedMajor = selectedProgram.major?.find(m => m.name === majorSelect.value);
-        //plan = [];
         rerender();
     };
     const handleTabClick = (e) => {
@@ -326,6 +419,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             return;
         }
+        clearUrlPlanParameter();
         rerender();
     };
     const handlePlannerChange = (e) => {
@@ -335,6 +429,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const tri = plan.find(p => p.id === sectionId);
             if (tri) {
                 tri[select.dataset.type] = parseInt(select.value, 10);
+                clearUrlPlanParameter();
                 rerender();
             }
         }
@@ -342,6 +437,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const handleClearPlan = () => {
         if (confirm("Are you sure you want to clear your entire degree plan? This action cannot be undone.")) {
             plan = [];
+            clearUrlPlanParameter();
+            generateEmptyPlan();
             rerender();
         }
     };
@@ -351,6 +448,22 @@ document.addEventListener('DOMContentLoaded', () => {
             const pill = detailsBtn.closest('.course-pill');
             if (pill) openCourseModal(getCourseByCode(pill.dataset.courseCode));
         }
+    };
+    const handleShareClick = () => {
+        const encodedData = generateShareData();
+        if (!encodedData) {
+            alert("Please select a program and plan some courses before sharing.");
+            return;
+        }
+        const url = `${window.location.origin}${window.location.pathname}?plan=${encodedData}`;
+        shareUrlInput.value = url;
+        shareModal.classList.remove('hidden');
+    };
+    const handleCopyLink = () => {
+        shareUrlInput.select();
+        document.execCommand('copy');
+        copyFeedback.textContent = 'Copied!';
+        setTimeout(() => { copyFeedback.textContent = ''; }, 2000);
     };
 
     // --- Drag and Drop Logic ---
@@ -407,6 +520,7 @@ document.addEventListener('DOMContentLoaded', () => {
             targetTri.courses.sort();
         }
 
+        clearUrlPlanParameter();
         rerender();
     }
 
@@ -421,6 +535,12 @@ document.addEventListener('DOMContentLoaded', () => {
         clearPlanBtn = document.getElementById('clear-plan-btn');
         addTrimesterBtn = document.getElementById('add-trimester-btn');
         coursePoolContainer = document.getElementById('course-pool-content');
+        sharePlanBtn = document.getElementById('share-plan-btn');
+        shareModal = document.getElementById('share-modal');
+        closeShareModalBtn = document.getElementById('close-share-modal-btn');
+        shareUrlInput = document.getElementById('share-url-input');
+        copyLinkBtn = document.getElementById('copy-link-btn');
+        copyFeedback = document.getElementById('copy-feedback');
 
         if (!coursePoolContainer) {
             console.error("Initialization failed: #course-pool-content not found.");
@@ -469,6 +589,9 @@ document.addEventListener('DOMContentLoaded', () => {
         coursePoolTabs.addEventListener('click', handleTabClick);
         clearPlanBtn.addEventListener('click', handleClearPlan);
         addTrimesterBtn.addEventListener('click', handleAddTrimester);
+        sharePlanBtn.addEventListener('click', handleShareClick);
+        copyLinkBtn.addEventListener('click', handleCopyLink);
+        closeShareModalBtn.addEventListener('click', () => shareModal.classList.add('hidden'));
         modal.closeBtn.addEventListener('click', closeCourseModal);
         modal.container.addEventListener('click', e => { if (e.target === modal.container) closeCourseModal(); });
         electiveFilters.search.addEventListener('input', renderCoursePool);
@@ -483,7 +606,12 @@ document.addEventListener('DOMContentLoaded', () => {
             selectedProgram = allPrograms.find(p => p.code === (savedData?.programCode || parseInt(programSelect.value, 10)));
             renderMajorSelect(savedData?.majorName);
             selectedMajor = selectedProgram.major?.find(m => m.name === (savedData?.majorName || ""));
-            plan = savedData?.plan && Array.isArray(savedData.plan) ? savedData.plan : [];
+
+            if (savedData?.plan && savedData.plan.length > 0) {
+                plan = savedData.plan;
+            } else {
+                generateEmptyPlan();
+            }
             rerender();
         }
     }
