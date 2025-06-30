@@ -55,8 +55,8 @@
             {
                 "type": "courses",
                 "codes": [
-                    "1814ICT",
                     "1804ICT",
+                    "1814ICT",
                     "2814ICT"
                 ],
                 "summary": "must not have completed 1814ICT Data Management AND must not have completed 1804ICT Data Management AND must not have completed 2814ICT Data Management"
@@ -115,6 +115,70 @@
         "academic_level": "Undergraduate"
     },
     {
+        "code": "1105ENG",
+        "name": "Numerical and Computing Skills",
+        "description": "This course introduces students to common computer software packages and develops their computing skills. The course introduces students to basic data analysis and numerical modelling techniques, and prepares students to solve engineering problems using off-shelf computer packages and software. This course includes project-based learning involving laboratory measurement.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "1116ICT",
+        "name": "Introduction to AI and Data Analytics",
+        "description": "This course will explore key concepts and characteristics of big data analytics, artificial intelligence fundamentals, the latest developments in ICT, and their application cases in building business strategies. It will help you understand how new systems are designed and implemented, and then decide if your business/organisation can take advantage of AI and machine learning technology to increase efficiency and resilience.\n\nIncompatible: 2030ICT Intro to Big Data Analytics",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "2030ICT"
+                ],
+                "summary": "must not have completed 2030ICT Introduction to Big Data Analytics"
+            }
+        ],
+        "campuses": [
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "1117ICT",
+        "name": "Big Data Analytics and Social Media",
+        "description": "This course aims to introduce the basic knowledge and necessary skills for analysis of Big Data. Big Data analytics is regarded as one of the important emerging technologies in different fields. The course is designed to stimulate interest in big data analytics in a popular scenario, i.e. social media. As such, some topics will be covered in depth while some will be covered only on an introductory level. Students will be shown how to extract information hidden in huge volumes of social media data. This is important for many businesses to understand the perceptions or opinions of their services or products. Incompatible: 3032ICT Big Data Analytics and Social Media (Previously known as 4030ICT Big Data Analytics and Social Media)",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "3032ICT",
+                    "4030ICT"
+                ],
+                "summary": "must not have completed 4030ICT Big Data Analytics and Social Media AND must not have completed 3032ICT Big Data Analytics and Social Media"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
         "code": "1118ICT",
         "name": "Introduction to Cyber Security",
         "description": "This course introduces the essential cyber security concepts, the procedures for risk mitigation, data privacy protection and governance. It covers a broad range of technical countermeasures from cryptographic algorithms to Internet protocols. It also thoroughly introduces how to enhance the cyber security from three dimensions: people, technology and policy. Incompatible: 2905ICT Fundamentals of Cyber Security",
@@ -137,6 +201,30 @@
         ],
         "trimesters_offered": [
             "Trimester 1",
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "1126GFS",
+        "name": "Introduction to Games Programming",
+        "description": "This course introduces the fundamental concepts of computer programming in the context of real-time game engines. Students will explore the design and implementation of core gameplay mechanics, player controls, and the manipulation of in-engine graphics. Participants in this course will acquire the essential skills and knowledge required to actively participate as a gameplay programmer in a game production environment.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1109GFS"
+                ],
+                "summary": "must not have completed 1109GFS Programming for Interactive Media"
+            }
+        ],
+        "campuses": [
+            "SB",
+            "GC"
+        ],
+        "trimesters_offered": [
             "Trimester 2"
         ],
         "academic_level": "Undergraduate"
@@ -176,6 +264,24 @@
         "trimesters_offered": [
             "Trimester 2",
             "Trimester 3"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "1805ICT",
+        "name": "Human Computer Interaction",
+        "description": "A key component to the discipline of Information Technology is the understanding and the advocacy of the user in the development of IT applications and systems. IT graduates must develop a mind-set that recognizes the importance of users and organisational contexts and employ user-centred methodologies in the development, evaluation, and deployment of IT applications and systems. This requires graduates to develop knowledge of HCI, including user and task analysis, human factors, ergonomics, application domains, user interface development tools and GUI frameworks, accessibility standards, and cognitive psychology.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "LG",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
         ],
         "academic_level": "Undergraduate"
     },
@@ -277,11 +383,11 @@
             {
                 "type": "courses",
                 "codes": [
-                    "1811ICT",
-                    "1701ICT"
+                    "1701ICT",
+                    "1811ICT"
                 ],
-                "logic": "OR",
-                "summary": "must have completed 1811ICT Programming Principles OR must have completed 1701ICT Creative Coding"
+                "summary": "must have completed 1811ICT Programming Principles OR must have completed 1701ICT Creative Coding",
+                "logic": "OR"
             }
         ],
         "anti_requisites": [],
@@ -306,7 +412,6 @@
                 "codes": [
                     "1007ICT"
                 ],
-                "logic": "AND",
                 "summary": "must have completed 1007ICT Computer Systems and Cyber Security"
             }
         ],
@@ -358,7 +463,6 @@
                 "codes": [
                     "1007ICT"
                 ],
-                "logic": "AND",
                 "summary": "must have completed 1007ICT Computer Systems and Cyber Security"
             }
         ],
@@ -407,6 +511,22 @@
         "academic_level": "Undergraduate"
     },
     {
+        "code": "2322ENG",
+        "name": "Engineering C",
+        "description": "This course teaches the essentials of C programing and algorithms with applications.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
         "code": "2511ICT",
         "name": "Business Analysis",
         "description": "This course provides intermediate coverage of the processes, methods, techniques and tools used by business analysts with an emphasis on people skills supporting negotiation and communication for the elicitation and specification of requirements for an information systems solution. Students interested in pursuing a career in business analysis (BA) can use this course as a stepping stone towards entering the BA profession. The course facilitates acquiring knowledge useful in preparing for certification by industry recognised bodies such as the International Institute of Business Analysis (IIBA).\n\nPre-requisite: 1803ICT Information Systems Foundations or 1410ICT Introduction to Information Systems and 1802ICT Foundations of Software Development (Previously known as 1802ICT Software Development and is incompatible with 1802ICT Software Development).",
@@ -415,11 +535,17 @@
             {
                 "type": "courses",
                 "codes": [
-                    "1803ICT",
                     "1410ICT",
+                    "1803ICT"
+                ],
+                "summary": "must have completed 1803ICT Application Systems OR must have completed 1410ICT Introduction to Information Systems AND must have completed 1802ICT Foundations of Systems Development",
+                "logic": "OR"
+            },
+            {
+                "type": "courses",
+                "codes": [
                     "1802ICT"
                 ],
-                "logic": "OR",
                 "summary": "must have completed 1803ICT Application Systems OR must have completed 1410ICT Introduction to Information Systems AND must have completed 1802ICT Foundations of Systems Development"
             }
         ],
@@ -460,12 +586,12 @@
             {
                 "type": "courses",
                 "codes": [
+                    "1305ENG",
                     "1806ICT",
-                    "1811ICT",
-                    "1305ENG"
+                    "1811ICT"
                 ],
-                "logic": "OR",
-                "summary": "must have completed 1806ICT Programming Fundamentals OR must have completed 1811ICT Programming Principles OR must have completed 1305ENG Engineering Programming"
+                "summary": "must have completed 1806ICT Programming Fundamentals OR must have completed 1811ICT Programming Principles OR must have completed 1305ENG Engineering Programming",
+                "logic": "OR"
             }
         ],
         "anti_requisites": [
@@ -498,8 +624,8 @@
                     "1811ICT",
                     "2807ICT"
                 ],
-                "logic": "OR",
-                "summary": "must have completed 1811ICT Programming Principles OR must have completed 2807ICT Programming Principles"
+                "summary": "must have completed 1811ICT Programming Principles OR must have completed 2807ICT Programming Principles",
+                "logic": "OR"
             }
         ],
         "anti_requisites": [],
@@ -522,15 +648,22 @@
             {
                 "type": "courses",
                 "codes": [
-                    "1020ENG",
                     "1013ICT",
-                    "1808ICT",
-                    "1806ICT",
-                    "1811ICT",
-                    "1305ENG"
+                    "1020ENG",
+                    "1808ICT"
                 ],
-                "logic": "OR",
-                "summary": "must have completed 1020ENG Engineering Mathematics 2 OR must have completed 1013ICT Mathematics for Computer Science OR must have completed 1808ICT Discrete Structures AND must have completed 1806ICT Programming Fundamentals OR must have completed 1811ICT Programming Principles OR must have completed 1305ENG Engineering Programming"
+                "summary": "must have completed 1020ENG Engineering Mathematics 2 OR must have completed 1013ICT Mathematics for Computer Science OR must have completed 1808ICT Discrete Structures AND must have completed 1806ICT Programming Fundamentals OR must have completed 1811ICT Programming Principles OR must have completed 1305ENG Engineering Programming",
+                "logic": "OR"
+            },
+            {
+                "type": "courses",
+                "codes": [
+                    "1305ENG",
+                    "1806ICT",
+                    "1811ICT"
+                ],
+                "summary": "must have completed 1020ENG Engineering Mathematics 2 OR must have completed 1013ICT Mathematics for Computer Science OR must have completed 1808ICT Discrete Structures AND must have completed 1806ICT Programming Fundamentals OR must have completed 1811ICT Programming Principles OR must have completed 1305ENG Engineering Programming",
+                "logic": "OR"
             }
         ],
         "anti_requisites": [],
@@ -554,7 +687,6 @@
                 "codes": [
                     "1803ICT"
                 ],
-                "logic": "AND",
                 "summary": "must have completed 1803ICT Application Systems"
             }
         ],
@@ -572,6 +704,32 @@
         "academic_level": "Undergraduate"
     },
     {
+        "code": "2807ICT",
+        "name": "Programming Principles",
+        "description": "Programming is a foundational skill for all computing disciplines. This course develops skills and concepts that are essential to good programming practice and problem solving. It covers fundamental programming concepts, object-oriented programming, basic data structures, and algorithmic processes.\n\nIncompatible: 1811ICT Programming Principles.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1811ICT"
+                ],
+                "summary": "must not have completed 1811ICT Programming Principles"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
         "code": "2808ICT",
         "name": "Secure Development Operations",
         "description": "Incorporating cyber security design in software development is essential for producing contemporary software systems. This course introduces the principles of secure code development for software and web development. Topics covered include secure software design, secure coding best practices, the Continuous Delivery (CD) model for secure software development, software security tools for data validation, code bug detection, and web application vulnerability assessment.\n\nPre-requisites: 2807ICT OR 1811ICT Programming Principles OR 1701ICT Creative Coding AND 1621ICT Web Technologies.\n\nPreviously known as 2808ICT Information and Security Management and incompatible with 2808ICT Information and Security Management.",
@@ -580,20 +738,19 @@
             {
                 "type": "courses",
                 "codes": [
-                    "1701ICT",
-                    "1621ICT"
+                    "1701ICT"
                 ],
-                "logic": "AND",
                 "summary": "must have completed 1701ICT Creative Coding AND must have completed 1621ICT Web Technologies, 1811ICT/2807ICT Programming Principles"
             },
             {
                 "type": "courses",
                 "codes": [
-                    "2807ICT",
-                    "1811ICT"
+                    "1621ICT",
+                    "1811ICT",
+                    "2807ICT"
                 ],
-                "logic": "OR",
-                "summary": "1811ICT/2807ICT Programming Principles"
+                "summary": "must have completed 1701ICT Creative Coding AND must have completed 1621ICT Web Technologies, 1811ICT/2807ICT Programming Principles",
+                "logic": "OR"
             }
         ],
         "anti_requisites": [],
@@ -642,8 +799,8 @@
                     "1811ICT",
                     "2807ICT"
                 ],
-                "logic": "OR",
-                "summary": "must have completed  1811ICT/2807ICT Programming Principles"
+                "summary": "must have completed  1811ICT/2807ICT Programming Principles",
+                "logic": "OR"
             }
         ],
         "anti_requisites": [],
@@ -654,6 +811,32 @@
             "SB"
         ],
         "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "2905ICT",
+        "name": "Fundamentals of Cyber Security",
+        "description": "This course introduces the essential cyber security concepts, the procedures for risk mitigation, data privacy protection and governance. It covers a broad range of technical countermeasures from cryptographic algorithms to Internet protocols. It also thoroughly introduces how to enhance the cyber security from three dimensions: people, technology and policy.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1118ICT"
+                ],
+                "summary": "must not have completed 1118ICT Introduction to Cyber Security"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
             "Trimester 2"
         ],
         "academic_level": "Undergraduate"
@@ -686,7 +869,6 @@
                 "codes": [
                     "1804ICT"
                 ],
-                "logic": "AND",
                 "summary": "must have completed 1804ICT Data Management"
             }
         ],
@@ -711,20 +893,20 @@
                 "type": "courses",
                 "codes": [
                     "1811ICT",
-                    "2807ICT",
                     "2701ICT",
-                    "2702ICT"
+                    "2702ICT",
+                    "2807ICT"
                 ],
-                "logic": "OR",
-                "summary": "must have completed 1811ICT Programming Principles OR must have completed 2807ICT Programming Principles OR must have completed 2701ICT Interactive App Development OR must have completed 2702ICT Intelligent Media Systems"
+                "summary": "must have completed 1811ICT Programming Principles OR must have completed 2807ICT Programming Principles OR must have completed 2701ICT Interactive App Development OR must have completed 2702ICT Intelligent Media Systems",
+                "logic": "OR"
             }
         ],
         "anti_requisites": [
             {
                 "type": "courses",
                 "codes": [
-                    "2703ICT",
-                    "2503ICT"
+                    "2503ICT",
+                    "2703ICT"
                 ],
                 "summary": "must not have completed 2703ICT Web Application Development AND must not have completed 2503ICT Web Programming"
             }
@@ -748,11 +930,11 @@
             {
                 "type": "courses",
                 "codes": [
-                    "1806ICT",
-                    "1305ENG"
+                    "1305ENG",
+                    "1806ICT"
                 ],
-                "logic": "OR",
-                "summary": "must have completed 1806ICT Programming Fundamentals OR must have completed 1305ENG Engineering Programming"
+                "summary": "must have completed 1806ICT Programming Fundamentals OR must have completed 1305ENG Engineering Programming",
+                "logic": "OR"
             }
         ],
         "anti_requisites": [],
@@ -774,10 +956,15 @@
             {
                 "type": "courses",
                 "codes": [
-                    "2801ICT",
+                    "2801ICT"
+                ],
+                "summary": "must have completed 2801ICT Computing Algorithms AND must have completed 2802ICT Intelligent Systems"
+            },
+            {
+                "type": "courses",
+                "codes": [
                     "2802ICT"
                 ],
-                "logic": "AND",
                 "summary": "must have completed 2801ICT Computing Algorithms AND must have completed 2802ICT Intelligent Systems"
             }
         ],
@@ -818,7 +1005,6 @@
                 "codes": [
                     "2802ICT"
                 ],
-                "logic": "AND",
                 "summary": "must have completed 2802ICT Intelligent Systems"
             }
         ],
@@ -833,6 +1019,23 @@
         "academic_level": "Undergraduate"
     },
     {
+        "code": "3009ICT",
+        "name": "Data Processing and Visualisation",
+        "description": "The course \"Data Processing and Visualization\" provides a comprehensive understanding of techniques, tools, and best practices for processing and visualizing data. Students learn data collection, cleaning, integration, transformation, and reduction techniques. They explore principles of effective data visualization, including choosing appropriate visualization types, encoding data attributes, and design principles. Students gain hands-on experience in creating visualizations for different data types, such as numerical, categorical, time series, spatial, and textual data. They also learn advanced techniques for large-scale data processing, statistical analysis, and machine learning.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
         "code": "3010ICT",
         "name": "Cyber Security of Cyber Physical Systems",
         "description": "The Cyber security of Cyber Physical Systems is a course with a technical emphasis is to educate students on the unique security challenges and vulnerabilities associated with cyber physical systems (CPS), which are systems that integrate physical and computational components, such as Internet of Things (IoT) devices, industrial control systems (ICS), autonomous vehicles, and smart grids. The course aims to provide students with a deep understanding of the technical concepts, methods, and tools used to secure CPS and develop the skills necessary to design, implement, and evaluate effective security measures for these systems.\n\nPre-requisites: 1118ICT Introduction to Cyber Security.",
@@ -843,7 +1046,6 @@
                 "codes": [
                     "1118ICT"
                 ],
-                "logic": "AND",
                 "summary": "must have completed 1118ICT Introduction to Cyber Security"
             }
         ],
@@ -905,8 +1107,8 @@
                     "1118ICT",
                     "2905ICT"
                 ],
-                "logic": "OR",
-                "summary": "must have completed 1118ICT Introduction to Cyber Security OR must have completed 2905ICT Fundamentals of Cyber Security"
+                "summary": "must have completed 1118ICT Introduction to Cyber Security OR must have completed 2905ICT Fundamentals of Cyber Security",
+                "logic": "OR"
             }
         ],
         "anti_requisites": [],
@@ -931,7 +1133,6 @@
                 "codes": [
                     "2016ICT"
                 ],
-                "logic": "AND",
                 "summary": "must have completed 2016ICT Cloud Architecture and Administration"
             }
         ],
@@ -989,7 +1190,6 @@
                 "codes": [
                     "2030ICT"
                 ],
-                "logic": "AND",
                 "summary": "must have completed 2030ICT Introduction to Big Data Analytics"
             }
         ],
@@ -1081,7 +1281,6 @@
                 "codes": [
                     "1803ICT"
                 ],
-                "logic": "AND",
                 "summary": "must have completed 1803ICT Application Systems"
             }
         ],
@@ -1094,6 +1293,30 @@
         "trimesters_offered": [
             "Trimester 1",
             "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3410ICT",
+        "name": "The Ethical Technologist",
+        "description": "This course explores the major ethical, professional, social and legal issues arising from the widespread use of IT, highlighting dilemmas that may be faced by IT practitioners. The subject examines the key debates and controversies pertinent to IT and their social consequences through the use of key case studies.\n\n*This course replaces 2003ICT Professional Issues in IT.\n\nPrerequisite: Successful completion of 120CP of first or second year Information Technology /Multimedia courses.\n\nPreviously known as 3410ICT Social and Professional Issues in IT and is incompatible with 3410ICT Social and Professional Issues in IT.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "units",
+                "amount": 120,
+                "summary": "the student must have achieved at least 120 units prior to enrolment"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "LG",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
         ],
         "academic_level": "Undergraduate"
     },
@@ -1126,8 +1349,8 @@
                     "1811ICT",
                     "2807ICT"
                 ],
-                "logic": "OR",
-                "summary": "must have completed 1811ICT Programming Principles OR must have completed 2807ICT Programming Principles"
+                "summary": "must have completed 1811ICT Programming Principles OR must have completed 2807ICT Programming Principles",
+                "logic": "OR"
             }
         ],
         "anti_requisites": [
@@ -1158,11 +1381,11 @@
             {
                 "type": "courses",
                 "codes": [
-                    "1811ICT",
-                    "1701ICT"
+                    "1701ICT",
+                    "1811ICT"
                 ],
-                "logic": "OR",
-                "summary": "must have completed 1811ICT Programming Principles OR must have completed 1701ICT Creative Coding"
+                "summary": "must have completed 1811ICT Programming Principles OR must have completed 1701ICT Creative Coding",
+                "logic": "OR"
             }
         ],
         "anti_requisites": [
@@ -1193,15 +1416,22 @@
             {
                 "type": "courses",
                 "codes": [
-                    "1711ICT",
                     "1007ICT",
-                    "1807ICT",
+                    "1711ICT",
+                    "1807ICT"
+                ],
+                "summary": "must have completed 1711ICT Introduction to Robotics OR must have completed 1007ICT Computer Systems and Cyber Security OR must have completed 1807ICT Computer and Network Architecture AND must have completed 1701ICT Creative Coding OR must have completed 1811ICT Programming Principles OR must have completed 2807ICT Programming Principles",
+                "logic": "OR"
+            },
+            {
+                "type": "courses",
+                "codes": [
                     "1701ICT",
                     "1811ICT",
                     "2807ICT"
                 ],
-                "logic": "OR",
-                "summary": "must have completed 1711ICT Introduction to Robotics OR must have completed 1007ICT Computer Systems and Cyber Security OR must have completed 1807ICT Computer and Network Architecture AND must have completed 1701ICT Creative Coding OR must have completed 1811ICT Programming Principles OR must have completed 2807ICT Programming Principles"
+                "summary": "must have completed 1711ICT Introduction to Robotics OR must have completed 1007ICT Computer Systems and Cyber Security OR must have completed 1807ICT Computer and Network Architecture AND must have completed 1701ICT Creative Coding OR must have completed 1811ICT Programming Principles OR must have completed 2807ICT Programming Principles",
+                "logic": "OR"
             }
         ],
         "anti_requisites": [],
@@ -1216,6 +1446,53 @@
         "academic_level": "Undergraduate"
     },
     {
+        "code": "3723ICT",
+        "name": "Interaction Design",
+        "description": "Interaction Design extends on the concepts introduced in Human Computer Interaction (1805ICT). In this course, students will expand their understanding of interaction design concepts through an application of theory and practice. We will explore design of information and interaction across different contexts, with design thinking as a structured approach. Students will be introduced to critical thinking concepts and will be required to take a reflective approach to their design practice. \n\nPrerequisite: 1805ICT Human Computer Interaction &amp; completion of 120CP.\n\nPreviously known as 3723ICT Education Design in Multimedia and is incompatible with 3723ICT Education Design in Multimedia.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "units",
+                "amount": 120,
+                "summary": "the student must have achieved at least 120 units prior to enrolment AND must have completed 1805ICT Human Computer Interaction"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3801ICT",
+        "name": "Numerical Algorithms",
+        "description": "This course covers algorithms that address a wide range of real-world numerical problems. Topics covered include: optimisation, linear programming, probabilistic, analysis and numerical approximations.\n\nPre-Requisite: 2801ICT Computing Algorithms\n\nPreviously known as 3801ICT Scientific Computing and is incompatible with 3801ICT Scientific Computing.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "2801ICT"
+                ],
+                "summary": "must have completed 2801ICT Computing Algorithms"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
         "code": "3803ICT",
         "name": "Big Data Analysis",
         "description": "This course will cover basic concepts in Data Analysis including cleaning and manipulating data into suitable forms (discrete, continuous, categorical, etc.) for visualizing and understanding relationships in data. Descriptive statistics and hypothesis testing, statistical inference, decision making theory and application of unsupervised machine learning for exploratory (scalable clustering algorithms) and confirmatory analysis (factor analysis up to nonnegative matrix factorization).\n\nPre-Requisite: 1808ICT Discrete Structures and 1811ICT Programming Principles. \nPreviously known as 3803ICT Data Analytics and is incompatible with 3803ICT Data Analytics.",
@@ -1224,10 +1501,15 @@
             {
                 "type": "courses",
                 "codes": [
-                    "1811ICT",
+                    "1811ICT"
+                ],
+                "summary": " must have completed 1811ICT Programming Principles AND must have completed 1808ICT Discrete Structures"
+            },
+            {
+                "type": "courses",
+                "codes": [
                     "1808ICT"
                 ],
-                "logic": "AND",
                 "summary": " must have completed 1811ICT Programming Principles AND must have completed 1808ICT Discrete Structures"
             }
         ],
@@ -1250,12 +1532,18 @@
             {
                 "type": "courses",
                 "codes": [
-                    "1808ICT",
-                    "2802ICT",
-                    "2030ICT"
+                    "1808ICT"
                 ],
-                "logic": "OR",
                 "summary": "must have completed 1808ICT Discrete Structures AND must have completed 2802ICT Intelligent Systems OR must have completed 2030ICT Introduction to Big Data Analytics"
+            },
+            {
+                "type": "courses",
+                "codes": [
+                    "2030ICT",
+                    "2802ICT"
+                ],
+                "summary": "must have completed 1808ICT Discrete Structures AND must have completed 2802ICT Intelligent Systems OR must have completed 2030ICT Introduction to Big Data Analytics",
+                "logic": "OR"
             }
         ],
         "anti_requisites": [],
@@ -1279,7 +1567,6 @@
                 "codes": [
                     "2801ICT"
                 ],
-                "logic": "AND",
                 "summary": "must have completed 2801ICT Computing Algorithms"
             }
         ],
@@ -1306,8 +1593,8 @@
                     "2204NSC",
                     "2802ICT"
                 ],
-                "logic": "OR",
-                "summary": "must have completed 1808ICT Discrete Structures OR must have completed 2204NSC Introduction to Mathematical Modelling OR must have completed 2802ICT Intelligent Systems"
+                "summary": "must have completed 1808ICT Discrete Structures OR must have completed 2204NSC Introduction to Mathematical Modelling OR must have completed 2802ICT Intelligent Systems",
+                "logic": "OR"
             }
         ],
         "anti_requisites": [],
@@ -1331,7 +1618,6 @@
                 "codes": [
                     "2809ICT"
                 ],
-                "logic": "AND",
                 "summary": "must have completed 2809ICT Computer Networking Essentials"
             }
         ],
@@ -1359,8 +1645,8 @@
                     "1118ICT",
                     "2905ICT"
                 ],
-                "logic": "OR",
-                "summary": "must have completed 1007ICT Computer Systems and Cyber Security OR must have completed 1118ICT Introduction to Cyber Security OR must have completed 2905ICT Fundamentals of Cyber Security"
+                "summary": "must have completed 1007ICT Computer Systems and Cyber Security OR must have completed 1118ICT Introduction to Cyber Security OR must have completed 2905ICT Fundamentals of Cyber Security",
+                "logic": "OR"
             }
         ],
         "anti_requisites": [],
@@ -1387,8 +1673,8 @@
                     "2511ICT",
                     "3812ICT"
                 ],
-                "logic": "OR",
-                "summary": "must have completed 2511ICT Business Analysis OR must have completed 3812ICT Agile Business Analysis"
+                "summary": "must have completed 2511ICT Business Analysis OR must have completed 3812ICT Agile Business Analysis",
+                "logic": "OR"
             }
         ],
         "anti_requisites": [],
@@ -1413,7 +1699,6 @@
                 "codes": [
                     "3808ICT"
                 ],
-                "logic": "AND",
                 "summary": "must have completed 3808ICT Routing and Internetworking"
             }
         ],
@@ -1460,11 +1745,11 @@
             {
                 "type": "courses",
                 "codes": [
-                    "2807ICT",
-                    "1811ICT"
+                    "1811ICT",
+                    "2807ICT"
                 ],
-                "logic": "OR",
-                "summary": "must have completed 2807ICT Programming Principles OR must have completed 1811ICT Programming Principles"
+                "summary": "must have completed 2807ICT Programming Principles OR must have completed 1811ICT Programming Principles",
+                "logic": "OR"
             }
         ],
         "anti_requisites": [
@@ -1592,7 +1877,6 @@
                 "codes": [
                     "2801ICT"
                 ],
-                "logic": "AND",
                 "summary": "must have completed 2801ICT Computing Algorithms"
             }
         ],
@@ -1624,12 +1908,12 @@
                 "type": "courses",
                 "codes": [
                     "1007ICT",
+                    "1118ICT",
                     "1807ICT",
-                    "2905ICT",
-                    "1118ICT"
+                    "2905ICT"
                 ],
-                "logic": "OR",
-                "summary": "must have completed 1007ICT Computer Systems and Cyber Security OR must have completed 1807ICT Computer and Network Architecture OR must have completed 2905ICT Fundamentals of Cyber Security OR must have completed 1118ICT Introduction to Cyber Security"
+                "summary": "must have completed 1007ICT Computer Systems and Cyber Security OR must have completed 1807ICT Computer and Network Architecture OR must have completed 2905ICT Fundamentals of Cyber Security OR must have completed 1118ICT Introduction to Cyber Security",
+                "logic": "OR"
             }
         ],
         "anti_requisites": [],
@@ -1669,6 +1953,233 @@
             "Trimester 1",
             "Trimester 2",
             "Trimester 3"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "6001ICT",
+        "name": "Advanced Topics in Computer Science A",
+        "description": "This is one of two Advanced Topics courses. Each of these courses embraces subject matter close to the current state-of-the-art. Students select a topic from the list accessed via bit.ly/462osGr. Students are strongly advised to consult the academic offering their selected topic well before the course starts. Any topic studied in one Advanced Topics course cannot be studied in the other Advanced Topics course. Students must submit a Departmental Consent Form prior to enrolment in this Advanced Topic course. Please access via https://bit.ly/3CFUQDm.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "6002ICT",
+        "name": "Advanced Topics in Computer Science B",
+        "description": "This is one of two Advanced Topics courses. Each of these courses embraces subject matter close to the current state-of-the-art. Students select a topic from the list accessed via bit.ly/462osGr. Students are strongly advised to consult the academic offering their selected topic well before the course starts. Any topic studied in one Advanced Topics course cannot be studied in the other Advanced Topics course. Students must submit a Departmental Consent Form prior to enrolment in this Advanced Topic course. Please access via https://bit.ly/3CFUQDm.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "6003ICT",
+        "name": "Advanced Topics in Computer Science C",
+        "description": "This is the third of four Advanced Topics in Computer Science Honours courses. Each of these courses embraces subject matter close to the current state-of-the-art. Students select a topic from the list accessed via bit.ly/462osGr. Students are strongly advised to consult the academic offering their selected topic well before the course starts. Any topic studied in one Advanced Topics course cannot be studied in any of the other three Advanced Topics courses. Students must submit a Departmental Consent Form prior to enrolment in this Advanced Topic course. Please access via https://bit.ly/3CFUQDm.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "6005ICT",
+        "name": "Research Practice in ICT 1",
+        "description": "This is one of two Advanced Topics courses. Each of these courses embraces subject matter close to the current state-of-the-art. Students are strongly advised to consult the academic offering their selected topic well before the course starts. Any topic studied in one Advanced Topics course cannot be studied in the other Advanced Topics course. Students must submit a Registration Form prior to enrolment in this Advanced Topic course.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "6006ICT",
+        "name": "Research Practice in ICT 2",
+        "description": "This is one of two Advanced Topics courses. Each of these courses embraces subject matter close to the current state-of-the-art. Students are strongly advised to consult the academic offering their selected topic well before the course starts. Any topic studied in one Advanced Topics course cannot be studied in the other Advanced Topics course. Students must submit a Registration Form prior to enrolment in this Advanced Topic course.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "6105ICT",
+        "name": "Advanced Topics in Information Technology C",
+        "description": "This is the third of four Advanced Topics in Information Technology courses. Each of these courses embraces subject matter close to the current state-of-the-art. Students select a topic from the list accessed via bit.ly/462osGr. Students are strongly advised to consult the academic offering their selected topic well before the course starts. Any topic studied in one Advanced Topics in Information Technology course cannot be studied in any of the other three Advanced Topics in Information Technology courses. Students must submit a Departmental Consent Form prior to enrolment in this Advanced Topic course. Please access the consent form via https://bit.ly/3CFUQDm.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "6112ICT",
+        "name": "Research Methods in IT",
+        "description": "The course introduces paradigms and methodologies used in Information Technology research that can be applied to a range of typical research problems arising in computer science, software engineering, multimedia and information systems. The course allows students to develop the skills necessary to engage in higher degree research and to demonstrate an understanding of the scientific research practices and conventions appropriate for their selected research domains.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "6190ICT_P1",
+        "name": "Honours Thesis",
+        "description": "Students enrolled in the Bachelor of Information Technology or Bachelor of Computer Science with Honours undertake a detailed study, literature survey, analysis, solution, and evaluation of a selected research problem relevant to their degree. Students present the details of their work in a dissertation, seminar and if applicable, an academically assessable implemented system. Students choose a research problem in consultation with academic staff members. Prior to being admitted to an Honours program, students negotiate the supervisory arrangement with the Program Director. Students should complete 6190ICT_P1, 6190ICT_P2, 6190ICT_P3 and 6190ICT_P4 in sequential order. A grade will be assigned upon successful completion of 6190ICT_P4. This course is part one of a set of four courses.",
+        "credit_points": 0,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "LG",
+            "NA"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "6190ICT_P2",
+        "name": "Honours Thesis",
+        "description": "Students enrolled in the Bachelor of Information Technology or Bachelor of Computer Science with Honours undertake a detailed study, literature survey, analysis, solution, and evaluation of a selected research problem relevant to their degree. Students present the details of their work in a dissertation, seminar and if applicable, an academically assessable implemented system. Students choose a research problem in consultation with academic staff members. Prior to being admitted to an Honours program, students negotiate the supervisory arrangement with the Program Director. Students should complete 6190ICT_P1, 6190ICT_P2, 6190ICT_P3 and 6190ICT_P4 in sequential order. A grade will be assigned upon successful completion of 6190ICT_P4. This course is part two of a set of four courses.",
+        "credit_points": 0,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "LG",
+            "NA"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "6190ICT_P3",
+        "name": "Honours Thesis",
+        "description": "Students enrolled in the Bachelor of Information Technology or Bachelor of Computer Science with Honours undertake a detailed study, literature survey, analysis, solution, and evaluation of a selected research problem relevant to their degree. Students present the details of their work in a dissertation, seminar and if applicable, an academically assessable implemented system. Students choose a research problem in consultation with academic staff members. Prior to being admitted to an Honours program, students negotiate the supervisory arrangement with the Program Director. Students should complete 6190ICT_P1, 6190ICT_P2, 6190ICT_P3 and 6190ICT_P4 in sequential order. A grade will be assigned upon successful completion of 6190ICT_P4. This course is part three of a set of four courses.",
+        "credit_points": 0,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "LG",
+            "NA"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "6190ICT_P4",
+        "name": "Honours Thesis",
+        "description": "Students enrolled in the Bachelor of Information Technology or Bachelor of Computer Science with Honours undertake a detailed study, literature survey, analysis, solution, and evaluation of a selected research problem relevant to their degree. Students present the details of their work in a dissertation, seminar and if applicable, an academically assessable implemented system. Students choose a research problem in consultation with academic staff members. Prior to being admitted to an Honours program, students negotiate the supervisory arrangement with the Program Director. Students should complete 6190ICT_P1, 6190ICT_P2, 6190ICT_P3 and 6190ICT_P4 in sequential order. A grade will be assigned upon successful completion of 6190ICT_P4. This is the final part of a set of four courses. Students must submit a Department Consent Form applicable to Advanced Topics and Honours Thesis courses prior to enrolment in 6190ICT_P4. Access form here: https://forms.office.com/r/hDnDttRWzz. \nThe submission deadline is Friday of Week 13.",
+        "credit_points": 40,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "LG",
+            "NA"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "6205ICT",
+        "name": "Advanced Topics in Information Technology A",
+        "description": "This is one of two Advanced Topics courses. Each of these courses embraces subject matter close to the current state-of-the-art. Students select a topic from the list accessed via bit.ly/462osGr. Students are strongly advised to consult the academic offering their selected topic well before the course starts. Any topic studied in one Advanced Topics course cannot be studied in the other Advanced Topics course. Students must submit a Departmental Consent Form prior to enrolment in this Advanced Topic course. Please access via https://bit.ly/3CFUQDm.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "6206ICT",
+        "name": "Advanced Topics in Information Technology B",
+        "description": "This is one of two Advanced Topics courses. Each of these courses embraces subject matter close to the current state-of-the-art. Students select a topic from the list accessed via bit.ly/462osGr. Students are strongly advised to consult the academic offering their selected topic well before the course starts. Any topic studied in one Advanced Topics course cannot be studied in the other Advanced Topics course. Students must submit a Departmental Consent Form prior to enrolment in this Advanced Topic course. Please access via https://bit.ly/3CFUQDm.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA"
+        ],
+        "trimesters_offered": [
+            "Trimester 1",
+            "Trimester 2"
         ],
         "academic_level": "Undergraduate"
     }

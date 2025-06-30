@@ -2,6 +2,7 @@
 	{
 		"name": "Bachelor of Computer Science",
 		"code": 1534,
+		"creditPoints": 240,
 		"core": [
 			"1004ICT",
 			"1007ICT",
@@ -60,8 +61,78 @@
 		]
 	},
 	{
+		"name": "Bachelor of Advanced Computer Science (Honours)",
+		"code": 1657,
+		"creditPoints": 320,
+		"core": [
+			"1004ICT",
+			"1007ICT",
+			"1811ICT",
+			"1011ICT",
+			"1808ICT",
+			"1013ICT",
+			"2801ICT",
+			"2810ICT",
+			"6112ICT",
+			"6190ICT_P1",
+			"6190ICT_P2",
+			"6190ICT_P3",
+			"6190ICT_P4",
+			"6001ICT",
+			"6002ICT",
+			"6003ICT"
+		],
+		"core_options": [
+			"3820ICT_P1",
+			"3820ICT_P2",
+			"3821ICT",
+			"3822ICT"
+		],
+		"major": [
+			{
+				"name": "Algorithms and Computing",
+				"courses": [
+					"2800ICT",
+					"2802ICT",
+					"3825ICT",
+					"3008ICT",
+					"3005ICT",
+					"3805ICT"
+				]
+			},
+			{
+				"name": "Data Science and Artificial Intelligence",
+				"courses": [
+					"2030ICT",
+					"2802ICT",
+					"3806ICT",
+					"3008ICT",
+					"3006ICT",
+					"3804ICT"
+				]
+			}
+		],
+		"electives": [
+			"1017SCG",
+			"1118ICT",
+			"2808ICT",
+			"2809ICT",
+			"3004ICT",
+			"3701ICT",
+			"3707ICT",
+			"3809ICT",
+			"3811ICT",
+			"3001ICT",
+			"3813ICT",
+			"3906ICT",
+			"1701ICT",
+			"3003ICT"
+		]
+	},
+	{
 		"name": "Bachelor of Cyber Security",
 		"code": 1677,
+		"creditPoints": 240,
 		"core": [
 			"1004ICT",
 			"1007ICT",
@@ -101,6 +172,7 @@
 	{
 		"name": "Bachelor of Information Technology",
 		"code": 1538,
+		"creditPoints": 240,
 		"core": [
 			"1004ICT",
 			"1007ICT",
