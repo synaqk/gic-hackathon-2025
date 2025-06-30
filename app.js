@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const loadData = async () => {
         try {
-            const [coursesRes, programsRes] = await Promise.all([fetch('/courses.json'), fetch('/programs.json')]);
+            const [coursesRes, programsRes] = await Promise.all([fetch(window.location.href + 'courses.json'), fetch('programs.json')]);
             if (!coursesRes.ok || !programsRes.ok) throw new Error('Failed to fetch data files.');
             allCourses = await coursesRes.json();
             allPrograms = await programsRes.json();
