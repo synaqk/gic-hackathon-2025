@@ -677,6 +677,44 @@
         "academic_level": "Undergraduate"
     },
     {
+        "code": "2805ICT",
+        "name": "System and Software Design",
+        "description": "Software design plays a significant role in developing software: during software design, software engineers produce various models that form a kind of blueprint of the solution to be implemented. Students will create, analyse and evaluate these models to determine whether or not they will allow fulfillment of the various requirements. Therefore, students will gain the command of the tools and techniques for software modelling, as well as describing software architectures. Such software designs specify the software architecture, that is, how software is decomposed and organised into components, and the interfaces between those components. Models should describe the components at a level of detail that enables their construction. Attention will also be given to the software architectures underlying user interfaces, techniques for designing and evaluating of the human-computer interface and techniques for creating and prototyping them.\n\nPre-requisite: 1811ICT Programming Principles or 2807ICT Programming Principles or 1806ICT Programming Fundamentals or 1305ENG Engineering Programming. \n\nIncompatible: 2509ICT Software Engineering and 3815ICT Software Engineering",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1305ENG",
+                    "1806ICT",
+                    "1811ICT",
+                    "2807ICT"
+                ],
+                "summary": "must have completed 1811ICT Programming Principles OR must have completed 2807ICT Programming Principles OR must have completed 1806ICT Programming Fundamentals OR must have completed 1305ENG Engineering Programming",
+                "logic": "OR"
+            }
+        ],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "2509ICT",
+                    "3815ICT"
+                ],
+                "summary": "must not have completed 2509ICT Software Engineering AND must not have completed 3815ICT Software Engineering"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
         "code": "2806ICT",
         "name": "IT Services Management",
         "description": "This course provides an understanding of the concepts and principles of IT service management (ITSM). Various case studies are analyzed to deepen the understanding of ITSM. This course introduces Information Technology Infrastructure Library (ITIL) as a context to better understand the service lifecycle. An organisation's objective of using an ITSM tool/framework is to provide improved business value to the customers. This can be achieved if IT processes are designed and implemented efficiently to provide better support and service to the users. This will lead to business success as there will be less disruption and loss of productive hours, reduce costs, increase revenue, improve public relations, and achieve their business objectives. This course provides a foundational understanding that students can use should they wish to prepare for certification by industry recognized bodies.\n\n\nPre-Requisite: 1803ICT Information Systems Foundations",
@@ -812,6 +850,34 @@
         ],
         "trimesters_offered": [
             "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "2814ICT",
+        "name": "Data Management",
+        "description": "Information derived from data is important to the management, productivity and competitive advantage of an organisation. Data must be efficiently collected, organised, retrieved and managed to make it meaningful to the organisation. It is the role of the IT professional to develop, deploy, manage and integrate data and information systems to support the organisation. This course includes the organisation, modeling, transformation and presentation of data. \nIncompatible with 1804ICT Data Management AND 1011ICT Applied Computing AND 1814ICT Data Management",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1011ICT",
+                    "1804ICT",
+                    "1814ICT"
+                ],
+                "summary": "must not have completed 1804ICT Data Management AND must not have completed 1011ICT Applied Computing AND must not have completed 1814ICT Data Management"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2",
+            "Trimester 3"
         ],
         "academic_level": "Undergraduate"
     },
@@ -1176,6 +1242,33 @@
         "trimesters_offered": [
             "Trimester 2",
             "Trimester 3"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "3030ICT",
+        "name": "Data Analytics",
+        "description": "This course will cover important concepts in Data Analytics including preparing, processing, normalizing, modeling, and visualizing data with the goal of summarizing useful information and supporting decision-making. It will introduce students to techniques and tools in data processing, exploratory data analytics, statistical data analytics, visual data analytics, analytics for special types of data. \nPre-requisites: 2030ICT Introduction to Big Data Analytics or 4030ICT Big Data Analytics and Social Media",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "2030ICT",
+                    "4030ICT"
+                ],
+                "summary": "must have completed 2030ICT Introduction to Big Data Analytics OR must have completed 4030ICT Big Data Analytics and Social Media",
+                "logic": "OR"
+            }
+        ],
+        "anti_requisites": [],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 1"
         ],
         "academic_level": "Undergraduate"
     },
@@ -1772,6 +1865,42 @@
         "academic_level": "Undergraduate"
     },
     {
+        "code": "3815ICT",
+        "name": "Software Engineering",
+        "description": "Software design plays a significant role in developing software: during software design, software engineers produce various models that form a kind of blueprint of the solution to be implemented. Students will create, analyse and evaluate these models to determine whether or not they will allow fulfillment of the various requirements. Therefore, students will gain the command of the tools and techniques for software modelling, as well as describing software architectures. Such software designs specify the software architecture, that is, how software is decomposed and organised into components, and the interfaces between those components. Models should describe the components at a level of detail that enables their construction. Attention will also be given to the software architectures underlying user interfaces, techniques for designing and evaluating of the human-computer interface and techniques for creating and prototyping them.",
+        "credit_points": 10,
+        "prerequisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "1811ICT",
+                    "2807ICT"
+                ],
+                "summary": "must have completed 1811ICT Programming Principles OR must have completed 2807ICT Programming Principles",
+                "logic": "OR"
+            }
+        ],
+        "anti_requisites": [
+            {
+                "type": "courses",
+                "codes": [
+                    "2509ICT",
+                    "2805ICT"
+                ],
+                "summary": "must not have completed 2509ICT Software Engineering AND must not have completed 2805ICT System and Software Design"
+            }
+        ],
+        "campuses": [
+            "GC",
+            "NA",
+            "OL"
+        ],
+        "trimesters_offered": [
+            "Trimester 2"
+        ],
+        "academic_level": "Undergraduate"
+    },
+    {
         "code": "3820ICT_P1",
         "name": "Work Integrated Learning Part 1",
         "description": "In this course, students participate in a project-based engagement with a real client. Projects are sought from a range of industry and university partners (project sponsors) that require significant development, communication and documentation effort. A project problem is addressed by a number of students working in a group to form a student project team. Significant importance is placed on effective project management and excellent communication strategies between team members, the project manager, and with the client. Students work in close liaison with their client and academic assessor throughout the project and are expected to demonstrate a good understanding of their project.\n\nTo be eligible for this course, students must have registered online with the Griffith Sciences Partnership Office in the trimester prior to enrolment. Please contact wil-gs@griffith.edu.au to register. If your registration is successful, you will be given permission to enrol prior to the start of the trimester.\n\nPre-requisite: Must have completed 160 credit points with at least 20 credit points from the major subjects which define the program. Student must also contact wil-gs@griffith.edu.au to register for enrolment.",
@@ -2181,6 +2310,19 @@
             "Trimester 1",
             "Trimester 2"
         ],
+        "academic_level": "Undergraduate"
+    },
+    {
+        "code": "6210ICT",
+        "name": "Evolutionary Neural Computing",
+        "description": "This course introduces the theoretical background and practical applications of computational intelligence.  The course covers topics such as Neural Networks, Evolutionary Neural Networks, Evolutionary Algorithms and Pattern Recognition.  Methods to design and implement real world applications using a combination of the above techniques will be shown.  Assessment will be by seminar and a final report.",
+        "credit_points": 10,
+        "prerequisites": [],
+        "anti_requisites": [],
+        "campuses": [
+            "GC"
+        ],
+        "trimesters_offered": null,
         "academic_level": "Undergraduate"
     }
 ]
