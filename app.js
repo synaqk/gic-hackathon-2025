@@ -383,8 +383,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Helper & Modal Functions ---
     const getCourseByCode = (code) => allCourses.find(c => c.code === code);
     const updateCreditPoints = () => {
-        const plannedCount = plan.flatMap(tri => tri.courses).length;
-        creditPointCounter.textContent = `Total Credit Points: ${plannedCount * 10} / 240`;
+        const plannedCreditPoints = plan.flatMap(tri => tri.courses)
+            .reduce((sum, course) => sum + getCourseByCode(course).credit_points, 0);
+        const totalCP = selectedProgram?.creditPoints || 240;
+        creditPointCounter.textContent = `Total Credit Points: ${plannedCreditPoints} / ${totalCP}`;
     };
     const openCourseModal = (course) => {
         if (!course) return;
